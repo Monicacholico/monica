@@ -1,0 +1,97 @@
+/*This css is the layout for body and sections*/
+/*and for general elements*/
+
+body{
+    background-color: #858c92;
+    color: #c6a59d;
+    margin: 0;
+}
+#Bonus {
+    Background-color: #000;
+    width: 100%;
+    height: 800px;
+}
+#Practices {
+    Background-color: #ffffff;
+    width: 100%;
+}
+
+.row{
+    width: 1100px;
+    height: auto;
+
+}
+.box{
+    width: 500px;
+    height: auto;
+    float: left;
+    margin: 30px;
+    padding: 5px;
+    background-color: ghostwhite;
+}
+h1{
+    text-align: center;
+}
+
+/*This is for the Bonuses section*/
+
+.art{
+    width:150px;
+    height: 220px;
+    border: solid 2px black;
+    float: left;
+    z-index: -1;
+}
+
+.dot{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    position: relative;
+    top: -30px;
+    left: 110px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#frames{
+    width: 320px;
+    height: 350px;
+    border-style: none;
+}
+
+.blue{
+    background-color: blue;
+    width:80px;
+    height: 250px;
+    float:left;
+    position: relative;
+}
+.green{
+    background-color: green;
+    width:120px;
+    height: 250px;
+    float: left;
+    position: relative;
+}
+.red{
+    background-color: red;
+    width: 100px;
+    height: 250px;
+    border-radius: 0 0 0 45px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    left: 180px;
+}
+ul, li, a {
+    text-decoration: none;
+    color: #c6a59d;
+    list-style: none;
+    display: inline-block;
+}
+
+/*This is for the Practice section*/
+
+
+}
