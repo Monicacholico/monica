@@ -2,9 +2,11 @@
 /*and for general elements*/
 
 body{
-    background-color: #858c92;
     color: #c6a59d;
     margin: 0;
+}
+header {
+    background-color: #c6a59d;
 }
 #Bonus {
     Background-color: #000;
@@ -16,18 +18,18 @@ body{
     width: 100%;
 }
 
-.row{
+.row-for-art{
     width: 1100px;
     height: auto;
 
 }
-.box{
+.box-for-art {
     width: 500px;
     height: auto;
     float: left;
     margin: 30px;
     padding: 5px;
-    background-color: ghostwhite;
+    background-color: black;
 }
 h1{
     text-align: center;
@@ -38,7 +40,7 @@ h1{
 .art{
     width:150px;
     height: 220px;
-    border: solid 2px black;
+    border: solid 2px white;
     float: left;
     z-index: -1;
 }
@@ -94,4 +96,114 @@ ul, li, a {
 /*This is for the Practice section*/
 
 
+.container{
+    width: 100%;
+    display: flexbox;
+    flex-wrap: wrap;
+    height: 1000px;
+    background-color: #c6a59d;
+    border: solid 2px black;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-section{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 300px;
+}
+.second-section{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 300px;
+    position: relative;
+    /*position: fixed;*/
+}
+
+.button-section{
+    /*margin: auto;*/
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 200px;
+}
+
+.one{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    /*overflow: auto;*/
+    /*position: fixed;*/
+}
+.two {
+    width: 200px;
+    height: 200px;
+    background-color: #00aba9;
+    /*overflow: auto;*/
+    /*position: fixed;*/
+}
+.three {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    /*overflow: auto;*/
+    /*position: fixed;*/
+}
+.four {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    /*overflow: auto;*/
+    /*position: fixed;*/
+}
+.five {
+    width: 200px;
+    height: 200px;
+    background-color: lightpink;
+    position: absolute;
+}
+.six {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: absolute;
+}
+.seven {
+    width: 200px;
+    height: 200px;
+    background-color: hotpink;
+    position: absolute;
+}
+.eight {
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    position: absolute;
+}
+.box {
+    width:200px;
+    height: 250px;
+    margin: auto;
+    /*position: fixed;*/
+}
+.box1{
+    width: 200px;
+    height: 250px;
+    margin: auto;
+    /*position: marker;*/
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background-color: black;
+    /*margin: 5px 25px;*/
+}
+.wrap-button {
+    margin-left: 120px;
 }

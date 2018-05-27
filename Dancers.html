@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Dancers Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dancersstyle.css">
 </head>
 <body>
-$END$
+<div class="header margin-auto">
+    <h1 class="dancing text-center margin-auto"></h1>
+    <hr>
+</div> <!-- end of class header -->
+<div class="container">
+    <div class="row">
+    <div class="col-12">
+        <div class="col-6 float-right">
+            <div class="form-group">
+                <label for="level-selection" class="text-dark font-weight-bold">Level</label>
+                <select class="form-control" id="level-selection">
+                    <option>Principal</option>
+                    <option>Soloist</option>
+                    <option>Corps of Ballet</option>
+                </select>
+            </div><!-- end of form-group-->
+            <label for="submit" class="text-dark font-weight-bold">Dancer Name</label>
+            <div class="active-cyan-4 mb-4">
+                <input id="input-dancer" class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div><!-- end of div active-cyan-4-->
+            <button id="submit" type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
+            <div class="form-group">
+                <h2 class="dancer mt-2">Add a Dancer</h2>
+                <label for="level-search" class="text-dark font-weight-bold">Level</label>
+                <select class="form-control" id="level-search">
+                    <option>Principal</option>
+                    <option>Soloist</option>
+                    <option>Corps of Ballet</option>
+                </select>
+            </div><!-- end of form-group-->
+            <label for="submit" class="text-dark font-weight-bold">Dancer Name</label>
+            <div class="active-cyan-4 mb-4">
+                <input id="dancer-array" class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div><!-- end of div active-cyan-4-->
+            <button id="submit-dancer" type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+        </div><!-- end of col-6 float right-->
+        <div class="col-6 float-left" id="dancers"></div>
+    </div><!-- end of col-12-->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
+    <script src="js/dancers.js"></script>
 </body>
 </html>

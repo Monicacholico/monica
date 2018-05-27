@@ -1,0 +1,46 @@
+
+body {
+    background-color: papayawhip;
+}
+
+.dot {
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #ee5967;
+    border-radius: 50%;
+    border: white 2px solid;
+}
+
+.text-shape {
+    font-family: Viktorie, sans-serif;
+    text-align: center;
+    position: relative;
+    top: 45%;
+    left: 10px;
+}
+
+.square {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #4ECE99;
+    border: white 2px solid;
+}
+
+.triangle {
+    position: relative;
+    bottom: 30%;
+    right: 5%;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #00aba9;
+    border-radius: 85% 45% 45% 65%;
+    border: white 2px solid;
+    float: right;
+}
