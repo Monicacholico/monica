@@ -1,32 +1,35 @@
 (function(window, document, $, Modernizr){
     "use strict";
 
+    var isIOS = !!('createTouch' in document);
 
     var transformProp = Modernizr.prefixed('transform');
 
-    function Zoomer(){
+    function Zoomer() {
         this.scrolled = 0;
         this.currentLevel = 0;
-        this.levels = 4;
+        this.levels = 6;
         this.distance3D = 1000;
         this.levelGuide = {
-            "#web-dev" : 0,
-            "#front-end": 1,
-            "#css": 2,
-            "#css3" : 3,
-            "#transforms": 4
+            "#intro": 0,
+            "#web-dev": 1,
+            "#front-end": 2,
+            "#css": 3,
+            "#css3": 4,
+            "#transforms": 5
         };
 
-    this.$window = $(window);
-    this.$document = $(document);
+        this.$window = $(window);
+        this.$document = $(document);
 
 
-    this.getScrollTransform = Modernizr.csstransforms3d ?
-        this.getScroll3DTransform : this.getScroll2DTransform;
+        this.getScrollTransform = Modernizr.csstransforms3d ?
+            this.getScroll3DTransform : this.getScroll2DTransform;
 
 
-    if (Modernizr.csstransforms) {
-    window.addEventListener( "scroll", this, false);
+        if (Modernizr.csstransforms) {
+            window.addEventListener("scroll", this, false);
+        }
     }
 
     Zoomer.prototype.handleEvent = function(event) {
@@ -57,12 +60,12 @@
 
         this. transformScroll(this.scrolled);
 
-        this.currentLevel = Math.round(this.scrolled * (this.leveles-1));
+        this.currentLevel = Math.round(this.scrolled * (this.levels-1));
 
-        if (this.currentLevel !== this.previousLevel && this.$nav){
+        if (this.currentLevel !== this.previousLevel && this.$nav) {
             this.$nav.find('.current').removeClass('current');
-            if(this.currentLevel < 4){
-            this.$nav.children()eq(this.currentLevel).addClass('current');
+            if(this.currentLevel < 5){
+            this.$nav.children().eq(this.currentLevel).addClass('current');
             }
             this.previousLevel = this.currentLevel;
 
@@ -76,7 +79,7 @@
         }
 
         var style = {};
-        style[transformProp] = this.getScrollTransform(scroll);
+        style[ transformProp ] = this.getScrollTransform(scroll);
         this.$content.css(style);
     };
 
@@ -88,7 +91,7 @@
 
         if(Modernizr.csstransitions){
         this.$content.addClass('transitions-on');
-        this.$content[0].addEventListener('webkitTransistionEnd', this, false);
+        this.$content[0].addEventListener('webkitTransitionEnd', this, false);
         this.$content[0].addEventListener('oTransitionEnd', this, false);
         this.$content[0].addEventListener('transitionend', this, false);
         }
@@ -102,14 +105,14 @@
     };
 
     Zoomer.prototype.webkitTransitionEnd = function (event) {
-        this.transsitionEnded (event);
+        this.transitionEnded (event);
     };
 
-    Zoomer.prototype.transitioned = function (event){
+    Zoomer.prototype.transitionend = function (event){
     this.transitionEnded (event);
     };
 
-    Zoomer.prototype.oTransitionEdn = function (event){
+    Zoomer.prototype.oTransitionEnd = function (event){
     this.transitionEnded (event);
     };
 
@@ -120,81 +123,32 @@
     this.$content[0].removeEventListener('oTransitionEnd', this, false);
     };
 
-    $(function(){
-    var BCXI = new Zoomer();
-    BCXI.$content = $('#content');
-    BCXI.$nav = $('#nav');
+    // disables transtition after nav click
 
-    var $body = $('body'),
-        IOSclass = isIOS ? 'ios' : 'no-ios';
+    Zoomer.prototype.transitionEnded = function ( event ) {
+    this.$content.removeClass('transitions-on');
+    this.$content.removeEventListener("webkitTransitionEnd", this, false);
+    this.$content.removeEventListener("transitionend", this, false);
+    this.$content.removeEventListener("oTransitionEnd", this, false);
+    };
 
-    $body.addClass(iOSclass);
+    $(function() {
+        var BCXI = new Zoomer();
+        BCXI.$content = $('#content');
+        BCXI.$nav = $('#nav');
 
-    if(Zoomer.csstransforms){
-    $('page-nav').each(function(){
-    this.addEventListener('click', BCXI, false);
+        var $body = $('body'),
+            iOSclass = isIOS ? 'ios' : 'no-ios';
+
+        $body.addClass(iOSclass);
+
+        if (Modernizr.csstransforms) {
+            $('.page-nav').each(function () {
+                this.addEventListener('click', BCXI, false);
+            });
+        }
+
     });
-    }
-
-
-
-
-
-
-
-
-
-
-    //=================== trying with the tutorial code
-
-// if (!Modernizr.csstransforms) {
-//     return;
-// }
-//
-// function Zoomer (content){
-//     this.content = content;
-//     this.scrolled = 0;
-//     this.levels = 4;
-//     this.docHeight = document.documentElement.offsetHeight;
-//
-// window.addEventListener('scroll', this, false);
-//
-// }
-//
-// Zoomer.prototype.scroll = function (event){
-//     this.scrolled = window.scrollY / (this.docHeight -window.innerHeight);
-//
-//     var scale = Math.pow(3, this.scrolled * this.levels),
-//         transformValue = 'scale('+scale+')';
-//
-//     this.content.style.WebkitTransform = transformValue;
-//     this.content.style.MozTransform = transformValue;
-//     this.content.style.OTransform = transformValue;
-//     this.content.style.transform = transformValue;
-// };
-//
-// function init(){
-//     var content = document.getElementById("content"),
-//         ZUI = new Zoomer(content);
-//
-// }
-//
-// window.addEventListener('DOMContentLoaded', init, false);
-//
-//
-//     $("#front-end").click(function(){
-//         $("#css").css("background-color", "yellow");
-//     })
-
-    // ================= trying manipulating the dom
-
-    // $(window).scroll(function(){
-    //     $("#web-dev").animate({fontSize: "2em"}, 8000);
-    //     $("#front-end").animate({fontSize: "5em"}, 8000);
-    //     $("#css").animate({fontSize: '10em'}, 8000);
-    //     $("#css3").animate({fontSize: "12em"}, 8000);
-    //     $("#transforms").animate({fontSize: "15em"}, 8000);
-    // });
 
 
 })(window, window.document, window.jQuery, window.Modernizr);
