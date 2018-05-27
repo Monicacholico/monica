@@ -5,89 +5,358 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta charset="UTF-8">
     <title>Zoomer</title>
-    <script src="js/modernizr-custom.js"></script>
+    <script src="js/modernizr.js"></script>
     <style>
 
     </style>
     <link rel="stylesheet" href="css/zoomer.css">
 </head>
-<body>
+<body class="no-ios">
 <div id ="wrap">
+    <div id="offset"></div>
     <div id ="container">
-        <ul id="nav">...</ul>
-        <div id="content">
-            <section id="web-dev">
-                <h1>Web Development</h1>
-                <img src="http://via.placeholder.com/150x150">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ea illo laudantium
-                    minima necessitatibus nesciunt placeat quis tenetur, voluptatem! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Blanditiis cum deleniti est expedita neque non nulla,
-                    odit. Animi aperiam deserunt id in iure minima, porro praesentium quae rem unde? Debitis
-                    dicta dolore eius facilis, fuga hic minima nostrum obcaecati odit omnis recusandae
-                    reiciendis repellat repellendus sapiente sint tempora ut voluptates.</p>
-            </section>
-            <section id="front-end">
-                <h1>Front End Development</h1>
-                <img src="http://via.placeholder.com/250x150">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ea illo laudantium
-                    minima necessitatibus nesciunt placeat quis tenetur, voluptatem! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Blanditiis cum deleniti est expedita neque non nulla,
-                    odit. Animi aperiam deserunt id in iure minima, porro praesentium quae rem unde? Debitis
-                    dicta dolore eius facilis, fuga hic minima nostrum obcaecati odit omnis recusandae
-                    reiciendis repellat repellendus sapiente sint tempora ut voluptates.</p>
-            </section>
-            <section id="css">
-                <h1>CSS Better perfomance</h1>
-                <img src="http://via.placeholder.com/250x250">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ea illo laudantium
-                    minima necessitatibus nesciunt placeat quis tenetur, voluptatem! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Blanditiis cum deleniti est expedita neque non nulla,
-                    odit. Animi aperiam deserunt id in iure minima, porro praesentium quae rem unde? Debitis
-                    dicta dolore eius facilis, fuga hic minima nostrum obcaecati odit omnis recusandae
-                    reiciendis repellat repellendus sapiente sint tempora ut voluptates.</p>
-            </section>
-            <section id="css3">
-                <h1>CSS3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ea illo laudantium
-                    minima necessitatibus nesciunt placeat quis tenetur, voluptatem! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Blanditiis cum deleniti est expedita neque non nulla,
-                    odit. Animi aperiam deserunt id in iure minima, porro praesentium quae rem unde? Debitis
-                    dicta dolore eius facilis, fuga hic minima nostrum obcaecati odit omnis recusandae
-                    reiciendis repellat repellendus sapiente sint tempora ut voluptates.</p>
-                <img src="http://via.placeholder.com/250x150">
-            </section>
-            <section id="transforms">
-                <h1>Transforms</h1>
-                <img src="http://via.placeholder.com/250x150">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ea illo laudantium
-                    minima necessitatibus nesciunt placeat quis tenetur, voluptatem! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Blanditiis cum deleniti est expedita neque non nulla,
-                    odit. Animi aperiam deserunt id in iure minima, porro praesentium quae rem unde? Debitis
-                    dicta dolore eius facilis, fuga hic minima nostrum obcaecati odit omnis recusandae
-                    reiciendis repellat repellendus sapiente sint tempora ut voluptates.</p>
-            </section>
+        <ul id="nav">
+            <li class="intro">
+            <a href="#">Intro</a>
+            </li>
+            <li class="featuring current">
+                <a href="#">Web Dev</a>
+            </li>
+            <li class="sponsorz">
+                <a href="#">Front-End</a>
+            </li>
+            <li class="flip-cup">
+                <a href="#">css</a>
+            </li>
+            <li class="teams">
+                <a href="#">css 3</a>
+            </li>
+        </ul>
+        <div class="environment">
+            <div id="content" style="transform: translate3d(0px, 0px, 4000px);">
+                <section id="intro">
+                    <h1>Beer Camp</h1>
+                    <h2>at SXSW 2011</h2>
+                    <time datetime="2011-03-13"></time>
+                    <div class="location">
+                        <a href="#">...</a>
+                    </div>
+                    <p class="blurb">A party of rational proportions</p>
+                    <div id="credit">
+                        <a href="#">an nclud creation</a>
+                    </div>
+                </section><!-- end of intro -->
+                <section id="web-dev">
+                    <h1>WEB DEVELOPMENT</h1>
+                    <div class="feature-beverages">
+                    <h2>Beer</h2>
+                    <p><span class="provided">Provided by</span><strong>
+                        <span class="victory">Victory</span>
+                        <span class="brewing">Brewing</span>
+                        <span class="company">Company</span>
+                    </strong>
+                    </p>
+                    </div><!-- end of feature beverages-->
+                    <div class="feature music">
+                        <h2>Music</h2>
+                        <p>
+                           <span class="provided">the sounds of</span>
+                            <strong class="team-genius">
+                            <span class="artist">Team Genius</span>
+                            <span class="link">...</span>
+                            </strong>
+                            <strong class="shells">
+                                <span class="artist">Shells</span>
+                                <span class="link"></span>
+                            </strong>
+                            <strong class="richard-gear">
+                                <span class="artist">DJ Richard Gear</span>
+                                <span class="link">..</span>
+                            </strong>
+                        </p>
+                    </div><!-- end of feature music -->
+                    <div class="blurb">
+                        <p>
+                            "Join us for a night of exceptional beverages, hot jamz, and fierce competition.
+                            Together, we shal raise our pint glasses and plastic cups in reverly to celebrate a great
+                            year in web&nbsp;design."
+                        </p>
+                        <p class="badge">SXSWi badge required</p>
+                    </div><!-- end of blurb-->
+                    <div class="links">
+                        "
+                                    Follow  "
+                        <a href="#"></a>
+                        "   for updates.
+                                Declare your attendance on "
+                        <a href="#"></a>
+                        " or "
+                        <a href="#"></a>
+                    </div><!-- end of links -->
+                    <h2>THE MOST AMAZING</h2>
+                    <p>PLACE TO KEEP IT FRESH</p>
+                </section><!-- end of Section WEB DEVELOPMENT-->
+                <section id="front-end">
+                    <h1>Front End Development</h1>
+                    <ul class="spnsr-list">
+                        <li class="n1">
+                            <a href="#">Vicotry Brewing Company</a>
+                        </li>
+                        <li class="n2">
+                            <a href="#">PR' UF</a>
+                        </li>
+                        <li class="n3">
+                            <a href="#">BrowserMedia</a>
+                        </li>
+                        <li class="n4 half">
+                            <a href="#">Hanerino</a>
+                        </li>
+                        <li class="n5 half">
+                            <a href="#">Functions Drinks</a>
+                        </li>
+                        <li class="n6 half">
+                            <a href="#">HashRocket</a>
+                        </li>
+                        <li class="n7 half">
+                            <a href="#">39Argyle</a>
+                        </li>
+                        <li class="n8">
+                            <a href="#">nclud</a>
+                        </li>
+                        <li class="n9 half">
+                            <a href="#">Bold</a>
+                        </li>
+                        <li class="n10 half">
+                            <a href="#">HowAboutWe.com</a>
+                        </li>
+                    </ul>
+                    <p class="fontfabric">
+                        <a href="#"></a>
+                        "Fonts by "
+                        <b>Fontfabric</b>
+                    </p>
+                    <p class="blurb">
+                                    Drink up. These guys are buying the rounds
+                    </p>
+                </section>
+                <section id="css">
+                    <h1>"Flip Cup"
+                    <span class="tournament">
+                        <span class="tournament">Tourn</span>
+                        <span class="tournament">ament</span>
+                    </span>
+                    </h1>
+                    <div class="copy">
+                        <h3>Get ready for battle</h3>
+                        <p>This year, the BeerCamp competition will take form in a flip cup tournament </p>
+                        <p>Each member of the winning team will walk away with a Flip HD Video Camera</p>
+                    </div><!-- end of Copy -->
+                    <h2 class=""rules-title>"Rules"</h2>
+                    <div class="rules">
+                        <ul>
+                            <li>Tournament will consist of 32 teams, single elimination.</li>
+                            <li>Matches are best-of-3 games. First team to win 2 games wins the match</li>
+                            <li>Teams consist of five players. All teams mus sign up with five players</li>
+                            <li>"Players cups are to bu filled with about 2 fluid ounces of a beverage. This liquid may be beer, water,
+                            soda, energy drink, etc.</li>
+                            <li>"Playing surface should be relatively clear of obstructions and objects. No 'backstops' may be used </li>
+                            <li>"In the event that only 4 team players are present for a match, one player may flip twice".</li>
+                            <li>Teams with less than 4 players present must forfeit that match.</li>
+                            <li>Sportsmanship is a virtue. Please don't be a jerk.</li>
+                        </ul>
+                    </div>
+                    <div class="arrow">
+                        <a id="start-sign-up" href="#" class="page-nav">
+                            <span class="team">View</span>
+                            <span class="sign-up">teams</span>
+                            ::after
+                        </a>
+                    </div>
+                </section>
+                <section id="css3">
+                    <h1>
+                        <span class="tournament">
+                            <span class="tourn">Tourn</span>
+                            <span class="ament">ament</span>
+                        </span>
+                        <span class="teams-title">Teams</span>
+                    </h1>
+                    <ul class="team-list">
+                        <li class="team team-a">
+                            <h2>2 girls, 3 guys and a&nbsp;cup.</h2>
+                            <ul class="player-list">
+                                <li class="player">
+                                    "
+                                    Kerry Gunther
+                                    "
+                                    <a href="#">@kerrygunther</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Jim Basio
+                                    "
+                                    <a href="#">@jimboi</a>
+                                </li>
+                                <li class="player">
+                                    Tanya Bodnya
+
+                                </li>
+                                <li class="player">
+                                    Dario Tadic
+
+                                </li>
+                                <li class="player">
+                                    Nastya Loskutova
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="team team-b">
+                            <h2>The Irish Hooters</h2>
+                            <ul>
+                                <li class="player">
+                                    "
+                                    Patrick Haney
+
+                                    "
+                                    <a href="#">@notasausage</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    J Cornelius
+                                    "
+                                    <a href="#">@jc</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Matt Downey
+                                    "
+                                    <a href="#">@mattdowney</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Jenna Marino
+                                    "
+                                    <a href="#">@jennamarino</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Adam Little
+                                    "
+                                    <a href="#">@adam</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="team team-a">
+                            <h2>Just the Flip</h2>
+                            <ul class="player-list">
+                                <li class="player">
+                                    "
+                                    Rusty Walters
+                                    "
+                                    <a href="#">@russwalters</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Kim Richie
+                                    "
+                                    <a href="#">@kimberwom</a>
+                                </li>
+                                <li class="player">
+                                    Ken Peluso
+
+                                </li>
+                                <li class="player">
+                                    Dave Wassell
+
+                                </li>
+                                <li class="player">
+                                    Cara Citino
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="team team-b">
+                            <h2>Kickstarter</h2>
+                            <ul class="player-list">
+                                <li class="player">
+                                    "
+                                    Andrew Cornett
+
+                                    "
+                                    <a href="#">@amotion</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Samuel Cole
+
+                                    "
+                                    <a href="#">@samuelcole</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Fred Benenson
+
+                                    "
+                                    <a href="#">@mercredis</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Charles Adler
+
+                                    "
+                                    <a href="#">@cadler</a>
+                                </li>
+                                <li class="player">
+                                    "
+                                    Brett Camper
+
+                                    "
+                                    <a href="#">@professorlemeza</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                        <li class="team team-a"></li>
+                        <li class="team team-b"></li>
+                    </ul>
+                </section>
+                <section id="transforms">
+                   <a href="#" id="totem" class="page-nav">
+                   </a>
+                </section><!-- ends transforms -->
+            </div>
         </div>
     </div>
 </div>
-<div id="scroller"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<div id="scroll-proxy"></div>
+<script src="js/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
 <script src="js/zoomer.js"></script>
 </body>
 </html>
