@@ -20,7 +20,7 @@ var quotes = [
     {
         text: "The light at the end of the tunnel is just the light of an oncoming train.",
         author: "Robert Lowell",
-        color: "orangered",
+        color: "orange",
         logoLocation: "../img/Shirley-Ann.png"
     },
     {

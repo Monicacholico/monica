@@ -1,12 +1,15 @@
 <!DOCTYPE html PUBLIC>
 	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Twitter Animation</title>
 		<!-- Insert your code here //-->
 		<script type="text/javascript" src="scripts/jquery.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				var url = "http://search.twitter.com/search.json?q=iphone&rpp=15&callback=?";
+				var url = "https://api.twitter.com/1.1/search/tweets.json";
 				var tweets = $('<ul id="tweets">').appendTo("#tweetscontainer");
      		    $.getJSON(url,  function(data){
 					$.each(data.results, function(i,item){
@@ -131,10 +134,7 @@
 		<div id="container">
 			<div id="trees">
 				<div id="tweetscontainer">
-		
-				
-				
-				
+
 				</div>
 			</div>
 		</div>
