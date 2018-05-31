@@ -58,6 +58,7 @@
         });
 
         function moveBird(id, speed, initialspeed) {
+            console.log('[moveBird] id: ' + id)
             if (parseInt($("#bird" + id).css("left")) == 100) {
                 // Second or + movement, final speed
                 $("#bird" + id).css("left", "-220px");
@@ -67,8 +68,16 @@
                 this.speed = initialspeed;
             }
 
-            $("#bird" + id).animate({left:"-100%"}, this.speed, "linear");
-            setTimeout("moveBird('" + id + "', "+ speed +")", this.speed+100);
+            $("#bird" + id).animate({left:"-100%"}, this.speed, "linear", function() {
+                console.log("finished animating bird id#" + id)
+                $('#bird' + id).css('left', '0');
+                moveBird(id, speed, initialspeed);
+            });
+
+            // setTimeout(function() {
+            //     moveBird(id, speed);
+            // }, this.speed + 100);
+            // setTimeout("moveBird('" + id + "', "+ speed +")", this.speed+100);
         }
 
     </script>

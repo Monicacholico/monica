@@ -8,12 +8,12 @@ body {
     font-family: Georgia, serif;
 }
 
-.women {
-    float: right;
-    width: 50%;
-    height: 200px;
+/*.women {*/
+    /*!*float: right;*!*/
+    /*!*width: 50%;*!*/
+    /*height: 200px;*/
 
-}
+/*}*/
 
 blockquote {
     width: 20%;
