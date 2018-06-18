@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- NOTE - Currently this will only work in webkit or Safari on the desktop, and 
+		in iOS on the iPhone, iPod touch and iPad. -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>3D Transformations in Webkit browsers</title>
+		<link href="styles/end-screen.css" rel="stylesheet" type="text/css">
+		<script src="scripts/jquery.js"></script>
+		<script>
+			// We'll use a script to set the class to apply
+
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="cube">
+				<div class="face" id="face1">
+					<h2>Wireframe</h2>
+					<p><img class="rotateanddrop" src="images/wireframe.jpeg" width="200" height="203" alt="All New!" />
+						Experience in the design and development process of web pages and web applications, as
+					well as building and presenting the process through wire frames. </p>
+					<ul>
+						<li><a href="#face2" title="Social Media">Home</a></li>
+					</ul>
+				</div>
+				<div class="face" id="face2">
+					<h2>Social Media</h2>
+					<p>Experience in creation and management of content for different social media channels such but
+						not limited to:</p>
+					<div class="social-media">
+						<img src="images/1face.png" height="50px">
+						<img src="images/2twitter.png" height="50px">
+						<img src="images/4instagram.png" height="50px">
+						<img src="images/9youtube.png" height="50px">
+						<img src="images/11vimeo.png" height="50px">
+						<img src="images/3google.png" height="50px">
+						<img src="images/14tumblr.png" height="50px">
+						<img src="images/20periscope.png" height="50px">
+						<img src="images/25snapchat.png" height="50px">
+						<img src="images/26pinteres.png" height="50px">
+					</div>
+
+					<ul class="link-buttons">
+						<li><a href="#face1" title="Wireframe">About us</a></li>
+						<li><a href="#face3" title="Contact">Contact us</a></li>
+					</ul>
+				</div>
+				<div class="face" id="face3">
+					<h2>Contact Us</h2>
+					<form action="">
+						<label>Name: <input type="text" id="name" name="name" placeholder="Enter your name" /></label>
+						<label>Email: <input type="email" id="email" name="email" placeholder="Enter your email address" /></label>
+						<label>Telephone: <input type="telephone" id="telephone" name="telephone" placeholder="Enter telephone number" /></label>
+						<label>Message: <textarea id="message" name="message"></textarea></label>
+						<input type="submit" value="Send message" />
+					</form>
+					<ul>
+						<li><a href="#face2" title="Wireframe">Home</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<script>
+
+        // $(document).ready(function(){
+		 //    $(".face ul li a").click(function(){
+		 //        parentid = $(this).parents("div").attr("id");
+		 //        href=$(this).attr("href");
+			// });
+        // });
+        //
+        // $(document).ready(function(){
+        //     $(".face ul li a").click(function(){
+        //         parentid = $(this).parents("div").attr("id");
+        //         href=$(this).attr("href");
+        //         switch(parentid){
+        //             case "face2":
+        //                 if (href == "#face3"){
+        //                     $("#cube").addClass("rotateright");
+        //                 } else {
+        //                     $("#cube").addClass("rotateleft");
+        //                     break;
+        //                 }
+        //         }
+        //         return false;
+        //
+        //     });
+        // });
+
+        $(document).ready(function(){
+            $(".face ul li a").click(function(){
+                parentid = $(this).parents("div").attr("id");
+                href=$(this).attr("href");
+                switch(parentid){
+					case "face2":
+					    if(href =="#face3")
+					        $("#cube").addClass("rotateright");
+						else
+					        $("#cube").addClass("rotateleft");
+					        break;
+						default:
+                    $("#cube").removeClass("rotateleft").removeClass("rotateright");
+                    break;
+				}
+				return false;
+			})
+		})
+
+
+
+
+	</script>
+	</body>
+</html>

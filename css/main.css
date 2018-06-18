@@ -214,7 +214,7 @@
 	 left: 0;
 	 right: 0;
 	 bottom: 0;
-	 background: #ffd42d;
+	 background: #ee5967;
 	 -webkit-transform: scaleX(0);
 	 transform: scaleX(0);
 	 -webkit-transform-origin: 0 50%;
@@ -251,7 +251,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #ffd42d;
+  background: #ee5967;
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
   transform: scaleX(1);
@@ -271,7 +271,7 @@
 }
 
 .main-nav li a.active{
-	background: #ffd42d;
+	background: #ee5967;
 	color:#2a2a2a;
 	z-index: 11;
 }
@@ -297,7 +297,7 @@
   margin-top:-25px;
   right: -10px;
   border-width: 25px 0 25px 15px;
-  border-color: transparent transparent transparent #ffd42d;
+  border-color: transparent transparent transparent #ee5967;
 
 }
 
@@ -320,17 +320,17 @@
     width:100%;
 	padding:18px 25px;
 	z-index:-1;
-	box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ffd42d, 0px 15px 0px -7px #ffd42d, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ffd42d, 0px 30px 0px -14px #ffd42d;
-	-moz-box-shadow:0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ffd42d, 0px 15px 0px -7px #ffd42d, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ffd42d, 0px 30px 0px -14px #ffd42d;
-	-webkit-box-shadow :0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ffd42d, 0px 15px 0px -7px #ffd42d, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ffd42d, 0px 30px 0px -14px #ffd42d;;
-	-ms-box-shadow:0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ffd42d, 0px 15px 0px -7px #ffd42d, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ffd42d, 0px 30px 0px -14px #ffd42d;;
-	-o-box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ffd42d, 0px 15px 0px -7px #ffd42d, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ffd42d, 0px 30px 0px -14px #ffd42d;;
+	box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ee5967, 0px 15px 0px -7px #ee5967, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ee5967, 0px 30px 0px -14px #ee5967;
+	-moz-box-shadow:0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ee5967, 0px 15px 0px -7px #ee5967, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ee5967, 0px 30px 0px -14px #ee5967;
+	-webkit-box-shadow :0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ee5967, 0px 15px 0px -7px #ee5967, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ee5967, 0px 30px 0px -14px #ee5967;;
+	-ms-box-shadow:0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ee5967, 0px 15px 0px -7px #ee5967, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ee5967, 0px 30px 0px -14px #ee5967;;
+	-o-box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.35), 0px 15px 0px -8px #ee5967, 0px 15px 0px -7px #ee5967, 0px 16px 25px -10px rgba(0,0,0,0.35), 0px 30px 0px -15px #ee5967, 0px 30px 0px -14px #ee5967;;
 	
 }
 
 
 .content:before{
-	background: #ffd42d;
+	background: #ee5967;
     content: "";
     height: 18px;
     left: 0;
@@ -402,7 +402,7 @@ img.signature{
 
 
 .listing-inner:after {
- 	background: #ffd42d;
+ 	background: #ee5967;
     bottom: -20px;
     content: " ";
     height: 12px;
@@ -453,7 +453,7 @@ img.signature{
 
 
 .listing  a:hover {
-    color:#ffd42d;
+    color:#ee5967;
 }
 
 .listing  a.btn-1 {
@@ -552,7 +552,7 @@ img.signature{
 }
 
 .timeline .timeline-inner .name:before {
-    background: #ffd42d;
+    background: #ee5967;
     border: 4px solid #fff;
     content: " ";
     height: 20px;
@@ -595,7 +595,7 @@ img.signature{
 }
 
 .timeline .timeline-inner .name span.date em {
- 	background:#ffd42d;
+ 	background:#ee5967;
     border-radius: 3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius :3px;
@@ -613,7 +613,7 @@ img.signature{
 
 
 .timeline .timeline-inner .name span.date em:before {
-    border-color: transparent #ffd42d;
+    border-color: transparent #ee5967;
     border-style: solid;
     border-width: 6px 5px 6px 0;
     content: "";
@@ -660,7 +660,7 @@ img.signature{
 }
 
 .listing-large-inner:after {
- 	background: #ffd42d;
+ 	background: #ee5967;
     bottom: -100px;
     content: " ";
     height: 12px;
@@ -735,8 +735,8 @@ ul.hb-list li {
 
 
 ul.hb-list li span {
-    border: 1px solid #ffd42d;
-    color: #ffd42d;
+    border: 1px solid #ee5967;
+    color: #ee5967;
     display: block;
     height: 45px;
     width: 45px;
@@ -778,7 +778,7 @@ ul.hb-list li h6 {
 }
 
 .rating span {
-    background: #ffd42d ;
+    background: #ee5967 ;
     display: inline-block;
 	margin: 0 3px;
     height: 6px;
@@ -800,7 +800,7 @@ ul.hb-list li h6 {
 
 
 .listing-large  a:hover {
-    color:#ffd42d;
+    color:#ee5967;
 }
 
 .listing-large  a.btn-1 {
@@ -829,7 +829,7 @@ ul.hb-list li h6 {
 }
 
 .services:after {
- 	background: #ffd42d;
+ 	background: #ee5967;
     bottom: 40px;
     content: " ";
     height: 12px;
@@ -861,7 +861,7 @@ ul.hb-list li h6 {
 }
 
 .block-service .ico {
-    color: #ffd42d;
+    color: #ee5967;
     font-size: 30px;
 }
 
@@ -1134,7 +1134,7 @@ ul.hb-list li h6 {
 }
 
 .post-meta  li a{
-    box-shadow: 0 -3px 0 #ffd42d inset;
+    box-shadow: 0 -3px 0 #ee5967 inset;
 	color: #2a2a2a;
 }
 
@@ -1442,7 +1442,7 @@ ul.hb-list li h6 {
 }
 
  .social a {
-    background:#ffd42d;
+    background:#ee5967;
     color: #2a2a2a;
     height: 40px;
     width: 40px;

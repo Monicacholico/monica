@@ -9,43 +9,43 @@ var quotes = [
         text: "All generalizations are false, including this one.",
         author: "Mark Twain",
         color: "black",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "img/Shirley-Ann.png"
     },
     {
         text: "I hope life isn't a joke, because I don't get it.",
         author: "Jack Handy",
         color: "navy",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "The light at the end of the tunnel is just the light of an oncoming train.",
         author: "Robert Lowell",
         color: "orange",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "Don't cry because it's over, smile because it happened.",
         author: "Dr. Seuss",
         color: "slateblue",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "../img/Shirley-Ann.png"
     },
     {
         text: "The road to success is always under construction.",
         author: "Lily Tomlin",
         color: "orange",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "/img/Shirley-Ann.png"
     },
     {
         text: "Just because nobody complains doesn't mean all parachutes are perfect.",
         author: "Benny Hill",
         color: "seagreen",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "img/Shirley-Ann.png"
     },
     {
         text: "Always forgive your enemies - nothing annoys them so much.",
         author: "Oscar Wilde",
         color: "maroon",
-        logoLocation: "../img/Shirley-Ann.png"
+        image: "../img/Shirley-Ann.png"
     }
 ];
 
@@ -118,18 +118,23 @@ function displayQuote(quote) {
  *
  */
 function displayQuote(quotes) {
+    console.table(quotes)
     var index = Math.floor(Math.random() * quotes.length);
     var quote = quotes[index];
 
 
     var textElement = document.getElementById("text");
     var authorElement = document.getElementById("author");
-    // var imageElement = document.getElementById("women");
+    var imageElement = document.getElementById("image");
+
+    console.log(quote);
+
 
     textElement.innerHTML = quote.text;
     authorElement.innerHTML = quote.author;
-    // imageElement.img = quote.logoLocation;
+    imageElement.innerHTML = `<img src=\"` + quote.image + `"/>`;
 
+    console.log(imageElement);
     var bigBubble = document.getElementById("bigBubble");
     bigBubble.style.background = quote.color;
     var mediumBubble = document.getElementById("mediumBubble");

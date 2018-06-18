@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Polaroid photos</title>
+
     <link rel="stylesheet" href="css/polaroid.css">
     <link rel="stylesheet" href="css/screen.css">
 </head>
@@ -40,19 +41,37 @@
     #instructions {
         position:		absolute;
         height:         250px;
-        top:			5px;
-        left:			-50px;
+        top:			-15px;
+        left:			-70px;
         width:			292px;
         padding:		100px 50px;
-        background:		transparent url("img/02wrinkle.jpg") no-repeat top left;
+        background:		transparent url("img/sticky-note.png") no-repeat top left;
         -webkit-transform:		rotate(-10deg) !important;
         -moz-transform: 		rotate(-10deg) !important;
         -ms-transform: 			rotate(-10deg) !important;
         -o-transform: 			rotate(-10deg) !important;
         transform:		rotate(-10deg) !important;
-        color: whitesmoke;
+        color: #080808;
         font-size:		1.5em;
         font-family: Viktorie, Verdana, Arial, sans-serif;
+    }
+
+    #instructions img {
+        -webkit-box-shadow: 2px 3px 11px 2px #474747;
+        box-shadow: 2px 3px 11px 2px #474747;
+    }
+
+    #instructions h1 {
+        opacity: .6;
+        margin-top: 25px;
+    }
+    #instructions p {
+        opacity: .6;
+    }
+
+    #instructions img {
+        height:auto;
+        width: 150px;
     }
 
     /*#instructions::after {*/
@@ -89,17 +108,17 @@
             <li>
                 <p class="photo"><img src="img/portfolio/marketingfld.jpg" height="300px" width="300px"></p>
             <li>
-                <p class="photo"><img src="img/portfolio4.png" height="300px" width="300px"></p>
+                <p class="photo"><img src="img/assemble.jpg" height="300px" width="300px"></p>
             </li><li>
                 <p class="photo"><img src="img/portfolio5.png" height="300px" width="300px"></p>
             </li><li>
-                <p class="photo"><img src="img/blog/3.jpg" height="300px" width ="300px"></p>
+                <p class="photo"><img src="img/fldad.jpg" height="300px" width ="300px"></p>
             </li>
         </ul>
         <div id="instructions">
-            <h1>Digital Marketing Creations</h1>
-            <p>Check out some of my digital marketing work. I create digital
-                content for Web pages, social networks and printing materials.
+            <h1>Digital Marketing Work</h1>
+            <p>Creation of content for different social media channels and
+                printing material.
             </p>
         </div>
     </div> <!-- end of div pinboard -->

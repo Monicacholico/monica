@@ -1,0 +1,18 @@
+body {
+    background-color: #ee5967;
+}
+
+.first {
+    background-color: #ee5967;
+}
+
+.card {
+    margin: 10px;
+    width: 200px;
+    /*height: 300px;*/
+}
+.card-group {
+    margin: auto;
+    width: 800px;
+    flex-wrap: wrap;
+}
