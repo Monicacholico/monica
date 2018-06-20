@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <title>Weather you know or not!</title>
+    <style>
+        body {
+            background-color: skyblue;
+            background-image: url("img/20.png");
+        }
+
+        .border {
+            border: 1px solid black;
+            height: 250px;
+            background-color: white;
+            text-align: center;
+        }
+
+        #map-canvas {
+            width: 100%;
+            height: 600px;
+        }
+
+        button {
+            border-radius: 25%;
+            /*margin-top: -20px;*/
+            margin-bottom: 30px;
+        }
+
+        #fw {
+            opacity: .7;
+            background-color: dimgray;
+            border-radius: 25%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="align-conten-center">
+    <h1 class="text-left bg-transparent fluid ml-4 p-0 align-content-center">Weather
+        Application</h1>
+</div>
+<div class="row">
+    <div class="col-md">
+        <h2 class="m-3">San Antonio</h2>
+    </div>
+    <div class="col-md">
+        <!--<h2 class="m-3">New Location</h2>-->
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="fw" class="row m-3">
+        <!--<section id="fw" class="col-12 m-auto "></section>-->
+    </div>
+    <div class="col-10 mt-5 ml-5 content-align-center">
+        <label for="newcity"><strong>Enter a city</strong></label><br>
+    </div>
+    <div class="col m-auto d-inline">
+        <input type="text" id="newcity" class="border rounded ml-5 col-10"
+               style="height: 50px">
+        <button id="urcity" type="submit" class="btn btn-dark text-white ml-3" style="height: 50px">Submit</button>
+    </div>
+
+    <div class="row m-3">
+        <div id="map-canvas" class="col-12"></div>
+    </div>
+
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL8LuyfD-k-yXPGU4QB4hnXdFL4XUF2Cs"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        "use strict";
+
+        // THIS IS THE FUNCTION TO SHOW SAN ANTONIO'S 3 DAYS FORECAST
+        showForecast(29.423017, -98.49);
+
+
+        var mapOptions = {
+            zoom: 19,
+            center: {
+                lat: 29.426791,
+                lng: -98.489602
+            },
+            MapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        var mapCanvas = document.getElementById("map-canvas");
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+        var geocoder = new google.maps.Geocoder();
+
+        var address = {
+            address: "13000 vista del norte, San Antonio, TX 78216",
+        };
+
+        var marker = new google.maps.Marker({
+            position: map.center,
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.DROP
+            // position: {lat: 29.426791, lng:-98.489602}
+
+        });
+
+        console.log(marker);
+
+        marker.addListener('dragend', function () {
+            showForecast(marker.position.lat(), marker.position.lng());
+        });
+        marker.addListener('click', toggleBounce);
+
+
+        function showForecast(latitude, longitude) {
+            var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+                lat: latitude,
+                lon: longitude,
+                cnt: 3
+            });
+
+            request.done(function (response) {
+                let $fw = $("#fw");
+                $fw.empty();
+                response.list.forEach(function (data) {
+                    $fw.append("<div class='col-sm border border-dark rounded' style='height: 300px'>"
+                        + "<h2>" + data.temp.max.toFixed() + "&degC" + "<strong>/</strong>"
+                        + data.temp.min + "&degC" + "</h2>"
+                        + "<p><img src='img/Weather_SunAbstract.png' height='50px' width='50px'></p>"
+                        // + "<p>"+ data.weather[0].icon + "</p>"
+                        + "<p>" + data.weather[0].main + "</p>"
+                        + "<p>" + data.weather[0].description + "</p>"
+                        + "<p>" + data.humidity + "</p>"
+                        + "<p>" + data.pressure + "</p></div>")
+                });
+            });
+            request.fail(onerror);
+        }
+
+        function callback(results, status, restaurants) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                console.log(results);
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+                // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+                map.setZoom(10);
+
+                marker.setPosition(results[0].geometry.location);
+
+                showForecast(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+
+                var info = new google.maps.InfoWindow({
+                    content: "<div id=window><img src='FogoBanner_SanAntonio_01.jpg'>" +
+                    "<div>" +
+                    "<h1>Fogo de Chao</h1>" +
+                    "<p style='text-align:justify'>Fogo de Chao is a Brazilian restaurant with the best" +
+                    " meat cuts<br>It also has a salad bar that includes charcuterie and cheeses.</p>" +
+                    "</div>"
+                });
+
+                marker.addListener('click', function () {
+                    info.open(map, marker);
+                });
+
+
+
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+
+        }
+
+        function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+            // toggleBounce();
+        }
+
+        var position = mapOptions.center;
+
+        function newMarker(map, mapOptions) {
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map
+            });
+            //marker.empty();
+            //marker.push(usermarker);
+            map.panTo(mapOptions);
+            var lat = $("#forLatitude");
+            var lon = $("#forLongitude");
+            $("#fw").click(function (e) {
+                e.preventDefault();
+                // alert(lat.val());
+                // alert(lon.val());
+                // console.log(lat.val(), lon.val());
+                var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                    APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+                    lat: lat.val(),
+                    lon: lon.val(),
+                    cnt: 3,
+                    units: "imperial"
+                });
+                request.done(function (response) {
+                    // prevLocation= "";
+                    response.list.forEach(function (data) {
+                        console.log(data);
+                        // $("#fw").empty()
+                        $("#fw").append("<div class='col-sm border border-dark bg-white p-2'>" +
+                            +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+                            + data.temp.min + "&degC" + "</h2>"
+                            + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
+                            // + "<p>"+ data.weather[0].icon + "</p>"
+                            + "<p>" + data.weather[0].main + "</p>"
+                            + "<p>" + data.weather[0].description + "</p>"
+                            + "<p>" + data.humidity + "</p>"
+                            + "<p>" + data.pressure + "</p></div>")
+                    });
+                });
+                request.fail(onerror);
+            });
+        }
+
+        geocoder.geocode(address, callback);
+
+
+        $("#urcity").click(function(){
+            var newcity= $("#newcity").val();
+
+            geocoder.geocode({address: newcity}, callback);
+        })
+
+    })();
+</script>
+
+</body>
