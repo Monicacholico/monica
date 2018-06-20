@@ -1,3 +1,11 @@
+
+/*
+    CSS3 Polaroid Slideshow
+    -----------------------
+    Author:         samhs
+*/
+
+
 var zindex = 50;
 
 $(document).ready(function(){

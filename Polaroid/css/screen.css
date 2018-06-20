@@ -71,21 +71,21 @@ body {
     left:			20px;
 }
 
-#instructions {
-position:		absolute;
-top:			10px;
-left:			-50px;
-width:			292px;
-padding:		100px 50px;
-background:		transparent url("/img/burlap2.jpg") no-repeat top left;
--webkit-transform:		rotate(-10deg) !important;
--moz-transform: 		rotate(-10deg) !important;
--ms-transform: 			rotate(-10deg) !important;
--o-transform: 			rotate(-10deg) !important;
-transform:		rotate(-10deg) !important;
-color:			#006;
-font-size:		1.2em;
-}
+/*#instructions {*/
+/*position:		absolute;*/
+/*top:			10px;*/
+/*left:			-50px;*/
+/*width:			292px;*/
+/*padding:		100px 50px;*/
+/*background:		transparent url("/img/burlap2.jpg") no-repeat top left;*/
+/*-webkit-transform:		rotate(-10deg) !important;*/
+/*-moz-transform: 		rotate(-10deg) !important;*/
+/*-ms-transform: 			rotate(-10deg) !important;*/
+/*-o-transform: 			rotate(-10deg) !important;*/
+/*transform:		rotate(-10deg) !important;*/
+/*color:			#006;*/
+/*font-size:		1.2em;*/
+/*}*/
 
 #instructions h1 {
     margin-top: -50px;
@@ -95,6 +95,7 @@ font-size:		1.2em;
 }
 
 #instructions p {
-    margin-top:		0;
-    padding-top:	0;
-    margin-bottom:	10px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
