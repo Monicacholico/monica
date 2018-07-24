@@ -9,7 +9,7 @@ var quotes = [
         text: "All generalizations are false, including this one.",
         author: "Mark Twain",
         color: "black",
-        image: "img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "I hope life isn't a joke, because I don't get it.",
@@ -27,25 +27,25 @@ var quotes = [
         text: "Don't cry because it's over, smile because it happened.",
         author: "Dr. Seuss",
         color: "slateblue",
-        image: "../img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "The road to success is always under construction.",
         author: "Lily Tomlin",
         color: "orange",
-        image: "/img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "Just because nobody complains doesn't mean all parachutes are perfect.",
         author: "Benny Hill",
         color: "seagreen",
-        image: "img/Shirley-Ann.png"
+        image: "Shirley-Ann.png"
     },
     {
         text: "Always forgive your enemies - nothing annoys them so much.",
         author: "Oscar Wilde",
         color: "maroon",
-        image: "../img/Shirley-Ann.png"
+        image: "img/Karen-Sparck.png"
     }
 ];
 
