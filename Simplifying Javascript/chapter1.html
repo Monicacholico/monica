@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascripting</title>
+
+<style>
+
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacitiy: 1;
+
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+       appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+
+<h1>Custom Range Slider</h1>
+<p>Drag the slider to display the current value.</p>
+
+<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+</div>
+
+
+
+
+
+
+
+
+<script src="chapter.js"></script>
+<!--<script>-->
+
+    <!--var slider = document.getElementById(("myRange"));-->
+    <!--var output = document.getElementById("demo");-->
+    <!--output.innerHTML = slider.value;-->
+    <!--slider.oninput = function(){-->
+        <!--output.innerHTML = this.value;-->
+    <!--};-->
+
+    <!--const taxRate = 0.1;-->
+    <!--const total = 100 + (100 * taxRate);-->
+
+    <!--console.log(`Your order is ${total}`);-->
+
+
+
+    <!--//-->
+    <!--// const discountTable = [];-->
+    <!--//-->
+    <!--// for (let i = 0; i < cart.length; i ++);-->
+    <!--// if (cart[i].discountAvailable) {-->
+    <!--//     discountTable.push(cart[i]);-->
+    <!--// }-->
+    <!--//-->
+    <!--// const discounTable1 = cart.filter(item => item.discountAvailable);-->
+    <!--//-->
+    <!--//-->
+    <!--// function getLowestPrice(item) {-->
+    <!--//-->
+    <!--//     var count = item.inventory;-->
+    <!--//     var price = item.price;-->
+    <!--//-->
+    <!--//     if (item.salePrice){-->
+    <!--//-->
+    <!--//         var count = item.saleInventory;-->
+    <!--//         if (count > 0) {-->
+    <!--//             price = item.salePrice;-->
+    <!--//         }-->
+    <!--//     }-->
+    <!--//     if (count) {-->
+    <!--//         return price;-->
+    <!--//     }-->
+    <!--//     return 0;-->
+    <!--// }-->
+
+
+        <!--console.log("hello world");-->
+
+
+<!--</script>-->
+</body>
+</html>
