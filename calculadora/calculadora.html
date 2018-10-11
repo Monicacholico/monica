@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pointe Shoes Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="pointeshoes.css">
+</head>
+<body>
+<div class="header margin-auto">
+    <h1 class="dancing text-center margin-auto"></h1>
+    <hr>
+</div> <!-- end of class header -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-6 float-right">
+                <div class="form-group">
+                    <label for="brand-selection" class="text-dark font-weight-bold">Brand</label>
+                    <select class="form-control" id="brand-selection">
+                        <option>Capezio</option>
+                        <option>Bloch</option>
+                        <option>Sansha</option>
+                        <option>Grishko</option>
+                    </select>
+                    <label for="feet-selection" class="text-dark font-weight-bold">Feet Type</label>
+                    <select class="form-control" id="feet-selection">
+                        <option>Egiptian</option>
+                        <option>Greek</option>
+                        <option>Giselle</option>
+                        <option>Egiptian-Greek</option>
+                        <option>Greek-Giselle</option>
+                    </select>
+                    <label for="level-selection" class="text-dark font-weight-bold">Level</label>
+                    <select class="form-control" id="level-selection">
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                    <label for="toesLength-selection" class="text-dark font-weight-bold">Toes Length</label>
+                    <select class="form-control" id="toesLength-selection">
+                        <option>Long</option>
+                        <option>Medium</option>
+                        <option>Short</option>
+                    </select>
+                    <label for="strength-selection" class="text-dark font-weight-bold">Feet Strength</label>
+                    <select class="form-control" id="strength-selection">
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                    <label for="arch-selection" class="text-dark font-weight-bold">Arch Profile</label>
+                    <select class="form-control" id="arch-selection">
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                    <label for="width-selection" class="text-dark font-weight-bold">Arch Profile</label>
+                    <select class="form-control" id="width-selection">
+                        <option>Width</option>
+                        <option>Medium</option>
+                        <option>Narrow</option>
+                    </select>
+                </div><!-- end of form-group-->
+                <label for="submit" class="text-dark font-weight-bold">Pointe Shoe Name</label>
+                <div class="active-cyan-4 mb-4">
+                    <input id="input-pointeShoe" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </div><!-- end of div active-cyan-4-->
+                <button id="submit" type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
+            </div><!-- end of col-6 float right-->
+            <div class="col-6 float-left" id="pointeShoes"></div>
+        </div><!-- end of col-12-->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
+<script src="calculadora.js"></script>
+</body>
+</html>
