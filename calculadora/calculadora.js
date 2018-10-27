@@ -2,7 +2,7 @@
     "use strict";
 
 function renderPointeShoe(pointeShoe) {
-    const html = "<div id='myDiv' class='row col-6 float-left position-static'>";
+    let html = "<div id='myDiv' class='row col-6 float-left position-static'>";
     html += "<h2 class= 'd-inline-block'>" + pointeShoe.name + "</h2>";
     html += "<p class='text-secondary d-inline-block mt-2 ml-2 font-weight-bold'>"
         + pointeShoe.brand + "<br>" + pointeShoe.level +  "<br>" + pointeShoe.toes_length + "<br>" + pointeShoe.width + "<br>" +
@@ -44,7 +44,7 @@ function keyupPointeShoe(){
     let filteredPointeShoes = [];
     pointeShoes.forEach(function(pointeShoe){
         if(pointeShoe.name.toUpperCase().indexOf(filter) > -1){
-           filteredPointeShoes.push(pointeShoe)
+           filteredPointeShoes.push(pointeShoe);
         }
     }) ;
     tbody.innerHTML = renderPointeShoes(filteredPointeShoes);
@@ -116,7 +116,7 @@ var pointeShoes = [
 
 let tbody = document.querySelector("#pointeShoes");
 let submitButton = document.querySelector("#submit");
-let submitPointeShoe = document.querySelector("#submit-pointeShoe");
+let filteredPointeShoe = document.querySelector("#input-pointeShoe");
 let levelSelection = document.querySelector("#level-selection");
 let brandSelection = document.querySelector("#brand-selection");
 let toesLengthSelection = document.querySelector("#toesLength-selection");
@@ -137,6 +137,8 @@ brandSelection.addEventListener("change", updatePointeShoes);
 toesLengthSelection.addEventListener("change", updatePointeShoes);
 archSelection.addEventListener("change", updatePointeShoes);
 widthSelection.addEventListener("change", updatePointeShoes);
+filteredPointeShoe.addEventListener("keyup", keyupPointeShoe);
+
 
 
 
