@@ -14,8 +14,8 @@ function renderPointeShoe(pointeShoe) {
 
 function renderPointeShoes (pointeShoes){
     let html = "";
-    for(let i = pointeShoes.legnth - 1; i >=0; i-- ){
-        html += renderPointeShoe((pointeShoes[i]));
+    for(let i = pointeShoes.length - 1; i >= 0; i-- ){
+        html += renderPointeShoe(pointeShoes[i]);
     }
     return html;
 }
@@ -44,10 +44,11 @@ function keyupPointeShoe(){
     let filteredPointeShoes = [];
     pointeShoes.forEach(function(pointeShoe){
         if(pointeShoe.name.toUpperCase().indexOf(filter) > -1){
-           tbody.innerHTML = renderPointeShoes(filteredPointeShoes);
+           filteredPointeShoes.push(pointeShoe)
         }
     }) ;
-    return keyupPointeShoe();
+    tbody.innerHTML = renderPointeShoes(filteredPointeShoes);
+    // return keyupPointeShoe();
 }
 
 
@@ -57,17 +58,17 @@ var pointeShoes = [
         brand: "Capezio",
         level: "Beginner",
         feet: "Greek",
-        toes_length: "medium-long",
+        toes_length: "medium",
         strength: "light",
         width: "medium",
-        arch: "low-medium"},
+        arch: "medium"},
     {id: 2, name: "Airess",
         brand: "Capezio",
         level: "Intermediate",
         feet: "Medium",
         toes_length: "medium",
-        strength: "medium-strong",
-        width: "medium-width",
+        strength: "strong",
+        width: "medium",
         arch: "medium"},
     {id: 3, name: "Alpha",
         brand: "Bloch",
@@ -89,7 +90,7 @@ var pointeShoes = [
         brand: "Sansaha",
         level: "Intermediate",
         feet: "Giselle",
-        toes_length: "medium-long",
+        toes_length: "",
         strength: "medium",
         width: "medium",
         arch: "medium"},
@@ -100,7 +101,7 @@ var pointeShoes = [
         toes_length: "medium",
         strength: "medium",
         width: "medium",
-        arch: "low-medium"}
+        arch: "low"}
     // {id: 7, name: "Greta Elizondo", level: "Soloist", ballet: "National Company of Mexico"},
     // {id: 8, name: "Esteban Hernandez", level: "Soloist", ballet: "San Francisco Ballet"},
     // {id: 9, name: "Skylar Brandt", level: "Soloist", ballet: "American Ballet Theatre"},
