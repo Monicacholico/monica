@@ -141,6 +141,4 @@ filteredPointeShoe.addEventListener("keyup", keyupPointeShoe);
 
 
 
-
-
 })();
