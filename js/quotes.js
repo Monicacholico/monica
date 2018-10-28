@@ -180,7 +180,7 @@ if(localStorage.getItem("quotes") !== null){
 var submitButton = document.querySelector("#new-quote");
 
 submitButton.addEventListener('click', function (e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     var newQuote = document.querySelector("#addQuote").value;
     var quoteBy = document.querySelector("#by").value;
