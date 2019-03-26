@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello';
+import Spreadsheet from './components/Spreadsheet';
+import RSuite from "./components/RSuite";
 
 class App extends Component {
   render() {
@@ -10,6 +12,8 @@ class App extends Component {
         <header className="App-header">
           <Hello/>
           <h1>Hello</h1>
+          <Spreadsheet/>
+          <RSuite/>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
