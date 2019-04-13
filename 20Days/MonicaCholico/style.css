@@ -1,0 +1,51 @@
+@import
+url("https:fonts:googleapis.com/css?family=Source+Code+Pro");
+
+* {
+    box-sizing: border-box;
+    font-family: "Source Code Pro",
+    monospace;
+    tex-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+body {
+    backgroun: #e6e6e7;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+footer {
+    position: absolute;
+    botton: 0;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 50px;
+}
+
+.flex-row a {
+    color: #30353a;
+    text-decoation: none;
+    position: relative;
+
+}
+
+
+
+
+
+
+
+
