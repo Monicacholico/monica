@@ -5,12 +5,12 @@ url("https:fonts:googleapis.com/css?family=Source+Code+Pro");
     box-sizing: border-box;
     font-family: "Source Code Pro",
     monospace;
-    tex-transform: uppercase;
+    text-transform: uppercase;
     font-size: 1.1rem;
 }
 
 body {
-    backgroun: #e6e6e7;
+    background: #e6e6e7;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -25,7 +25,7 @@ header {
 
 footer {
     position: absolute;
-    botton: 0;
+    bottom: 0;
 }
 
 .flex-row{
@@ -37,22 +37,20 @@ footer {
 
 .flex-row a {
     color: #30353a;
-    text-decoation: none;
+    text-decoration: none;
     position: relative;
-    &:after {
-        content: "";
-        width: 100%;
-        max-width: 0%;
-        background: #30353a;
-        height: 1px;
-        position: absolute;
-        transition: all 0.2s ease-out;
-     }
-    &:hover {
-        &:after {
-            max-width: 100%;
-         }
-     }
+}
+.flex-row a:after {
+    content: "";
+    width: 100%;
+    max-width: 0;
+    background: #30353a;
+    height: 1px;
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+.flex-row a:hover:after {
+    max-width: 100%;
 }
 
 .logo-wrapper {
@@ -71,7 +69,7 @@ overflow: auto;
 
 .video-wrapper > div {
     margin-bottom: 400px;
-    margitn-top: 400px;
+    margin-top: 400px;
 }
 
 .divider {
@@ -93,7 +91,7 @@ overflow: auto;
 }
 
 #eye {
-    backgroud-image:
+    background-image:
     url("https://zephyo.github.io/22Days/code/2/graphics/eye.svg");
 }
 
@@ -119,7 +117,7 @@ overflow: auto;
 }
 
 .odd {
-    flex-direciton: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .center {
@@ -152,17 +150,17 @@ overflow: auto;
     position: absolute;
     top: 0;
     border: none;
-    backgroun-color: transparent;
-    color: #FFF;
+    background-color: transparent;
+    color: #fff;
     font-weight: 800;
     opacity: 0;
     transition: all 0.3s ease-in;
-    &:hover {
-        opacity: 1;
-        background-color:
-    rgba(0,0,0,0.4);
-     }
 }
+.button-wrapper button:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 
 
 
