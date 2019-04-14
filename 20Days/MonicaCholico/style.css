@@ -39,8 +39,137 @@ footer {
     color: #30353a;
     text-decoation: none;
     position: relative;
-
+    &:after {
+        content: "";
+        width: 100%;
+        max-width: 0%;
+        background: #30353a;
+        height: 1px;
+        position: absolute;
+        transition: all 0.2s ease-out;
+     }
+    &:hover {
+        &:after {
+            max-width: 100%;
+         }
+     }
 }
+
+.logo-wrapper {
+    width: 100%;
+    pointer-events: none;
+    position: absolute;
+}
+
+.video-wrapper{
+    filter: brightness(0.8)
+grayscale(40%);
+overflow: auto;
+    flex-grow:1;
+    color: #fff;
+}
+
+.video-wrapper > div {
+    margin-bottom: 400px;
+    margitn-top: 400px;
+}
+
+.divider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 50%;
+}
+
+#death {
+    background-image:
+    url("https://zephyo.github.io/22Days/code/2/graphics/dead.svg");
+}
+
+#eye {
+    backgroud-image:
+    url("https://zephyo.github.io/22Days/code/2/graphics/eye.svg");
+}
+
+.divider.blurb {
+    background-image:
+    url("https://zephyo.github.io/22Days/code/2/graphics/tile.jpg");
+    width: 50%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.video {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+        margin-left: 150px;
+    margin-right: 150px;
+}
+
+.even {
+    flex-direction: row;
+}
+
+.odd {
+    flex-direciton: row-reverse;
+}
+
+.center {
+    justify-content: center;
+}
+
+.button-wrapper {
+    position: relative;
+}
+
+.video.medium .button-wrapper {
+    width: 45%;
+}
+
+.video.full .button-wrapper {
+    width: 75%;
+}
+
+.video.small .button-wrapper {
+    width: 35%;
+}
+
+.button-wrapper > * {
+    width: 100%;
+}
+
+.button-wrapper button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border: none;
+    backgroun-color: transparent;
+    color: #FFF;
+    font-weight: 800;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    &:hover {
+        opacity: 1;
+        background-color:
+    rgba(0,0,0,0.4);
+     }
+}
+
+
+
+
+
+
+
 
 
 
