@@ -5,30 +5,30 @@
     <title>Get User Media Code Along!</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 <div class="video-wrapper">
-    <div class=""divider icon
+    <div class="divider icon"
          id="death"></div>
     <div class="divider blurb">
-        <p>Lorem ipsum dolor sit amet,
+        Lorem ipsum dolor sit amet,
             consectetur adipisicing elit.
             Animi, cupiditate doloremque dolores
             enim et incidunt minima numquam obcaecati
             omnis perferendis ratione rem,
             reprehenderit tempora temporibus vel.
-            Ab aliquam facilis reiciendis.</p>
+            Ab aliquam facilis reiciendis
         Monica No one will care about
         your ideas. Don't tell them
         what you think. You keep safe.
     </div>
     <div class="video medium odd">
-        <div class="icon" id="eye">
-        </div>
+        <div class="icon" id="eye"></div>
         <div class="button-wrapper">
             <video autoplay loop muted>
-                <source src="https://zephyo.github.io/22Days/code/graphics/iwokeup.mp4"
+                <source src="video-home.mp4"
                         type="video/mp4"/>
             </video>
-            <button class="video-button">
+            <button class="video-wrapper">
                 Y vuelvo a expresarme.
             </button>
         </div>
@@ -36,17 +36,24 @@
     <div class="video full center">
         <div class="button-wrapper">
             <video autoPlay loop muted>
-                <source
-                        src="https://zephyo.github.io/22Days/code/graphics/youleftme.mp4"
-                        type="video/mp4"/>
+                <source src="video-home.mp4" type="video/mp4"/>
             </video>
             <button class="video-button">
                 Sucumbo...
             </button>
         </div>
     </div>
-    <div class="divider icon"
-         id="death"></div>
+    <div class="video small even">
+        <div class="button-wrapper">
+            <video autoplay loop muted>
+                <source src="video-home.mp4" type="video/mp4">
+            </video>
+            <button class="video-button">
+                faded-,'
+            </button>
+        </div>
+    </div>
+    <div class="divider icon" id="death"></div>
 </div>
 <header class="flex-row">
     <a href="#">
@@ -59,7 +66,7 @@
         Info
     </a>
 </header>
-<div class="logg-wrapper"></div>
+<div class="logo-wrapper"></div>
 <footer class="flex-row">
     <a href="monicacholico.github.io">
         Github
@@ -68,27 +75,37 @@
         monicacholico@edu.com
     </a>
 </footer>
+
+<!--<script src="js/scripts.js"></script>-->
+<script src="js/three.js"></script>
 <script>
-    var scene, camera, render, dae;
+    /*
+   Thanks to the following for help:
+   https://webdesign.tutsplus.com/tutorials/a-noobs-guide-to-threejs--cms-28639
+   https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_bumpmap.html
+   */
+
+    //3D header functionality
+    var scene, camera, renderer, dae;
 
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
 
     var mouseX = windowHalfX;
-    var mouseY = windowHalfX / 2;
+    var mouseY = windowHalfY / 2;
     var targetX = 0;
     var targetY = 0;
 
     console.log(windowHalfX);
 
-    function init(){
+    function init() {
         scene = new THREE.Scene();
 
         camera = new THREE.PerspectiveCamera(
-            10,
+            75,
             window.innerWidth / window.innerHeight,
-            1,
-            10000
+            0.1,
+            1000
         );
         setCameraPos();
         camera.lookAt(scene.position);
@@ -98,44 +115,38 @@
             alpha: true,
             antialias: true
         });
-
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        renderer.setSize(window.innerWidth,
-            window.innerHeight);
+        // renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
 
         document.querySelector(".logo-wrapper").appendChild(renderer.domElement);
 
         var light = new THREE.AmbientLight("#FFF");
-        Scene.add(light);
+        scene.add(light);
 
-        var loader = new THREE.ColladaLoader();
+        // loader = new THREE.ColladaLoader();
 
-        loader.load(
-            "https://zephyo.github.io/22Days/code/2/graphics/angelaheader.dae",
-            function (collada) {
-                dae = collada.scene;
-                dae.position.set(0.3, 0, 0);
-                scene.add(dae);
-                animate();
-            }
-        );
+        // loader.load(
+        //     // replace with your .dae model
+        //     "/angelaheader.dae",
+        //     function(collada) {
+        //         dae = collada.scene;
+        //         dae.position.set(0.3, 0, 0);
+        //         scene.add(dae);
+        //         animate();
+        //     }
+        // );
 
-        document.addEventListener("mousemove",
-            onDocumentMouseMove, false);
-        window.addEventListener("resize",
-            onWindowResize, false);
+        document.addEventListener("mousemove", onDocumentMouseMove, false);
+        window.addEventListener("resize", onWindowResize, false);
     }
 
-    function onDocumentMouseMove(event)
-    {
+    function onDocumentMouseMove(event) {
         mouseX = event.clientX - windowHalfX;
         mouseY = event.clientY - windowHalfY;
     }
 
-    function onWindoResize(){
-        renderer.setSize(window.innerWidth,
-            window.innerHeight);
+    function onWindowResize() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         windowHalfX = window.innerWidth / 2;
@@ -143,39 +154,40 @@
         setCameraPos();
     }
 
-    function setCameraPos(){
+    function setCameraPos() {
         camera.position.z = clamp(25 - windowHalfX * 0.01, 15, 25);
     }
 
-    function clamp (num, min, max){
-        return num <= min ? min : num >=
-        max ? max : num;
+    function clamp(num, min, max) {
+        return num <= min ? min : num >= max ? max : num;
     }
 
-
-    var scrolleEl = document.body.querySelector(".video-wrapper");
+    //auto and looping scrolling **looping is kind of janky; fix HTML to give appearance of looping
+    var scrollEl = document.body.querySelector(".video-wrapper");
     var scrollNum = 0,
         increment = 1,
-        sign =1;
+        sign = 1;
 
     function handleScroll() {
         var diff = scrollEl.scrollTop - scrollNum;
 
-        if (diff > increment || diff < -increment) {
+        if (diff > increment || diff < - increment) {
             if (diff < 0) {
                 sign = -1;
             } else {
                 sign = 1;
             }
-            scrollNum = scrollEl.scrolltop;
+            scrollNum = scrollEl.scrollTop;
         } else {
             scrollNum += increment * sign;
             if (scrollNum >= scrollEl.scrollHeight - window.innerHeight) {
+                //loop to top
                 scrollNum = 0;
             } else if (scrollNum <= 0) {
+                //loop to bottom
                 scrollNum = scrollEl.scrollHeight;
             }
-            scrolleEl.scrollTop = scrollNum;
+            scrollEl.scrollTop = scrollNum;
         }
     }
 
@@ -188,16 +200,17 @@
     function render() {
         targetX = mouseX * 0.0003;
         targetY = mouseY * 0.001 - 1.5;
-        if(dae){
+        if (dae) {
+            dae.rotation.z += 0.05 * (targetX - dae.rotation.z);
             dae.rotation.x += 0.05 * (targetY - dae.rotation.x);
         }
         renderer.render(scene, camera);
     }
 
-
     init();
+    animate();
+
 
 </script>
-
 </body>
 </html>
