@@ -92,6 +92,71 @@ p {
     width: $length1;
 }
 
+#second-bar .bar-input{
+    width: $length2;
+}
+
+#third-bar .bar-input{
+    width: $length3;
+}
+
+.bar {
+    display: inline-block;
+    position: relative;
+    transform: rotateX(55deg);
+    transform-style: preserve-3d;
+    .bar-face{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        transform-origin: 50% 100%;
+
+        &.front {
+            transform: rotateX(-90deg);
+         }
+
+         &.percentage:before {
+            height: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+          }
+    }
+}
+
+@mixin build-skin($color) {
+    &.floor {
+        box-shadow: 0 1.3em 1.2em -0.4em rgba(0, 0, 70, 0.25),
+        0 -2em 15em 0.5em
+    rgba($hightlight, 1), 0 -0.75em 25em 10em rgba(white, 0.4);
+}
+    &.percentage:before {
+    box-shadow: 0 1.6em 7em -0.3em rgba($color, 0.5);
+     }
+}
+
+#first-bar .bar{
+    width: $length1;
+    height: $height1;
+    .bar-face {
+        background: $bg-bar1;
+        @include build-skin($fill-bar1);
+
+    &.roof {
+    transform: translateZ($height1);
+     }
+     &.back {
+    transform: rotateX(-90deg) translateZ(-$height1);
+      }
+      &.percentage:before {
+    background-color: $fill-bar1;
+       }
+   }
+}
 
 
 
