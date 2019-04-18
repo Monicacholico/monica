@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,900');
+
+$hightlight : #4D5075;
+
+$height1: 7vh;
+$length1: 55vh;
+$bg-bar1: rgba(white, 0.5);
+$fill-bar1: rgb(#954169, 0.6);
+
+$height2: 10vh;
+$length2: 40vh;
+$bg-bar2: rgba(white, 0.5);
+$fill-bar21: #867292;
+$fill-bar2: #C8D4FA;
+
+$height3: 8vh;
+$length3: 42vh;
+$bg-bar3: rgba(#E89AAD, 0.7);
+$fill-bar31: rgba(#F5EFC8, 0.5);
+$fill-bar3: #ec0071;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(0deg, #EEEFED, #F9E3E9);
+    margin: 0;
+    padding: 0;
+    color: $hightlight;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7vh 15vw 0vh 15vw;
+}
+
+h1{
+    text-align: center;
+    margin: 0 0 10vh 0;
+    font-size: 7vh;
+    font-weight: 500;
+    text-shadow: 0px -15px 70px;
+    rgba($hightlight, 0.6);
+}
+
+h1 b {
+    font-weight: 900;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3rem;
+    text-shadow: 10px 5px 25px rgba($hightlight, 0.6);
+    margin-bottom: 8vh;
+}
+
+.third-bar-p {
+    margin-top: 7vh;
+}
+
+.perspective {
+    perspective: 70vh;
+    text-align: center;
+    perspective-origin: 50% 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+    &:hover {
+    transform: scale(1.04);
+     }
+}
+
+.bar-input {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+#first-bar .bar-input {
+    width: $length1;
+}
+
+
+
+
+
