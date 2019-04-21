@@ -20,3 +20,181 @@ $box-shadow: 0 0.8rem 3rem rgba($dark, 0.6);
 html, body{
     height: 100vh;
 }
+
+body {
+    backgroun-dize: 200%;
+    background-image: linear-gradient(toright, #874da2 0%, #c43a30 49%, #fe9a8b 100%);
+    -webkit-animation: background 15s ease infinite;
+    animation: background 15s ease infinite;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: #874da2;
+}
+
+.App {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Profile {
+    z-index: 5;
+    box-shadow: 0 0.8rem 3rem rgba(135, 77, 162, 0.6);
+    border-radius: 1rem;
+    background: #fdfbfb;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    margin : 5vh 0 5vh 0;
+    overflow-y: scroll;
+}
+
+.Profile h1,
+.Profile .email {
+    text-align: center;
+    color: #fdfbfb;
+}
+
+.Profile h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.Profile .profileImage.main {
+    width: 6rem;
+    height: 6rem;
+    margin: 5vh auto 10vh auto;
+}
+
+.Profile .top-half {
+    display: block;
+    flex: none;
+    padding-top: 5vh;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    background: #ea6982;
+    background-image: url("https://zephyo.github.io/22Days/code/7/graphics/clouds.svg"), linear-gradient(0deg, #fe9a8b, #ea6982);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.profileImage{
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.icons {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.icons a {
+    flex: auto;
+    color: #f9748f;
+    position: relative;
+    padding: 2vh;
+}
+
+.icons a svg {
+    width: 100%;
+}
+
+.icons a.active:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 0.8vh;
+    background: #f9748f;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.prev-chats {
+    flex: 1 1 auto;
+    margin: 1rem 2rem 0 2rem;
+    overflow-y: scroll;
+}
+
+.prev-chat {
+    display: grid;
+    grid-template-columns: 4.2rem 1fr;
+    grid-template-rows: 2.1rem;
+    grid-column-gap: 1.5rem;
+    grid-template-areas: "pic header" "pic text";
+    justify-items: stretch;
+    align-items: stretch;
+    margin: 1rem 0 1rem 0;
+    line-height: 2.5rem;
+}
+
+.prev-chat .profileImage {
+    background: linear-gradient(90deg, #ea6982, #fe9a8b);
+    grid-area: pic;
+    width: 4.2rem;
+    height: 4.2rem;
+    padding: 0.2rem;
+    margin: 0.3rem;
+}
+
+.prev-chat:first-child h2 {
+    color: #874da2;
+}
+
+.prev-chat h2 {
+    font-weight: 600;
+    grid-area: header;
+    color: #ea6982;
+}
+
+.prev-chat p {
+    grid-area: text;
+    color: #fe9a8b;
+    text-overflow: fade;
+    white-space: nowrap;
+}
+
+.Conversation {
+    padding-right: 0.5rem;
+    position: relative;
+    box-shadow: 0 0.8rem 3rem rgba(135, 77, 162, 0.6);
+    border-radius: 1rem 0 0 1rem;
+    background: white;
+    margin: 12vh 0 12vh 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Conversation svg {
+    color: #ea6982;
+}
+
+.Conversation button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.Conversation header {
+    flex: none;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    position: relative;
+}
+
+.Convers
+
+
+
+
+
+
+
+
