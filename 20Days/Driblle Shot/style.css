@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,600");
+
+$ligth: $fdfbfb;
+$med: #ea6982;
+$med1: #fe9a8b;
+$med2: $f9748f;
+$dark: #874da2;
+$dark1: #c43a30;
+
+$border-radius: 1rem;
+$box-shadow: 0 0.8rem 3rem rgba($dark, 0.6);
+
+$border-radius: 1rem;
+$box-shadow: 0 0.8rem 3rem rgba($dark, 0.6);
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
