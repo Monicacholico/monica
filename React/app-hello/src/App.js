@@ -36,7 +36,7 @@ import RSuite from "./components/RSuite";
       //   </header>
       // </div>
       <div>
-        <label className="label" for="name">Enter name: </label>
+        <label className="label" htmlFor="name">Enter name: </label>
         <input id="name" />
         <button style={{backgroundColor: 'blue', color: 'white'}}>
         {buttonText.text}
