@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinder</title>
+</head>
+<body>
+<div class="progress">
+    <div class="progress-bar"></div>
+</div>
+
+<!-- email -->
+<div class="scroll-view">
+    <fieldset class="form-group">
+        <label for="text-input">
+            <h1>My name is</h1>
+        </label>
+        <div class="input-holder">
+            <input type="text" id="text-input" placeholder=" "
+                   class="form-control" onchange="setUsername(this);">
+            <small class="text-muted">This is how it will appear in Tinder</small>
+        </div>
+    </fieldset>
+
+    <!-- password -->
+    <fieldset class="form-group">
+        <label for="pword-input">
+            <h1>My password is</h1>
+        </label>
+        <div class="input-holder">
+            <input type="password" id="pword-input" name="password"
+            placeholder=" " class="form-control">
+        </div>
+    </fieldset>
+
+    <!-- birthday -->
+    <fieldset class="form-group">
+        <label for="bday">
+            <h1>My birthday is</h1>
+        </label>
+        <div class="input-holder">
+            <input type="date" id="bday" name="date"
+            class="form-control" onchange="setBday(this);">
+            <small class="text-muted">Your age will be public</small>
+        </div>
+    </fieldset>
+
+    <!-- gender -->
+
+    <fieldset class="form-group">
+        <h1>I am a</h1>
+        <div class="input-holder d-flex flex-column">
+            <button type="button selected" class="btn btn-gender">WOMAN</button>
+             <button type="button" class="btn btn-gender">
+                 WOMAN
+             </button>
+            <button type="button" class="btn btn-gender">MAN</button>
+            <button type="button" class="btn btn-gender">OTHER</button>
+        </div>
+    </fieldset>
+
+    <!-- image picker -->
+
+    <fieldset class="form-group">
+        <h1>My best pic is</h1>
+        <div class="input-holder img-picker-div">
+            <input type="file" id="img-pk" class="hide" onchange="readURL(this);">
+            <label for="img-pk" class="btn-picker">
+                <i class="fas fa-plus"></i>
+            </label>
+            <p class="text-center text-muted">Add your photo</p>
+        </div>
+    </fieldset>
+</div>
+<button class="btn back-btn">
+    <i class="fas fa-chevron-left"></i>
+</button>
+<button class="btn btn-lg next-btn font-weight-bold">SIGN UP</button>
+
+</body>
+</html>

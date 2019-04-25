@@ -6,6 +6,6 @@ const Appl = () => {
 };
 
 reactDOM.render(
-    <App/>
-    document.querySelector("#root)
+    <App/>,
+    document.querySelector("#root")
 );
