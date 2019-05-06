@@ -1,18 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,600");
 
-$ligth: $fdfbfb;
-$med: #ea6982;
-$med1: #fe9a8b;
-$med2: $f9748f;
-$dark: #874da2;
-$dark1: #c43a30;
-
-$border-radius: 1rem;
-$box-shadow: 0 0.8rem 3rem rgba($dark, 0.6);
-
-$border-radius: 1rem;
-$box-shadow: 0 0.8rem 3rem rgba($dark, 0.6);
-
 * {
     box-sizing: border-box;
 }
@@ -22,8 +9,8 @@ html, body{
 }
 
 body {
-    backgroun-dize: 200%;
-    background-image: linear-gradient(toright, #874da2 0%, #c43a30 49%, #fe9a8b 100%);
+    background-size: 200%;
+    background-image: linear-gradient(to right, #874da2 0%, #c43a30 49%, #fe9a8b 100%);
     -webkit-animation: background 15s ease infinite;
     animation: background 15s ease infinite;
     margin: 0;
@@ -199,6 +186,222 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.Conversation svg {
+    color: #ea6982;
+}
+
+.Conversation button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.Conversation header {
+    flex: none;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    position: relative;
+}
+
+.Conversation header .name {
+    flex: auto;
+    text-align: center;
+}
+
+.Conversation header svg {
+    position: absolute;
+    margin-left: 0.8rem;
+}
+
+.Conversation .container {
+    flex: auto;
+    width: 22rem;
+    overflow-y: scroll;
+}
+
+.Conversation .container .Messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.Conversation .container .Messages .Message {
+    margin: 0.5rem 0.8rem 0.5rem 0.8rem;
+    max-width: 70%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.Conversation .container .Messages .Message.you {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.Conversation .container. .Messages .Message.you span{
+    border-radius: 1rem 0rem 1rem 1rem;
+    background: #874da2;
+    color: #fdfbfb;
+}
+
+.Conversation .container .Messages .Message.them span {
+    border-radius: 0 1rem 1rem 1rem;
+    background: #fdfbfb;
+}
+
+.Conversation .container .Messages .Message span{
+    padding: 1rem;
+    box-shadow: 0.5rem 0.7rem 4rem rgba(135, 77, 162, 0.4);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.Conversation .container .Messages .Message p {
+    margin-top: 1rem;
+    display: inline-block;
+    color: #f9748f;
+}
+
+.Conversation .container .Messages .Message:last-child {
+    margin-bottom: 2rem;
+}
+
+.messageInput {
+    background: transparent;
+    font-size: 0.9rem;
+}
+
+input {
+    border:none;
+    padding: 1.5rem;
+    color: #874da2;
+}
+
+input::-webkit-input-placeholder {
+    color: #ea6982;
+}
+
+input:-ms-input-placeholder {
+    color: #ea6982;
+}
+
+input::-ms-input-placeholder {
+    color: #ea6982;
+}
+
+input::placeholder{
+    color: #ea6982;
+}
+
+button {
+    border: none;
+    background: transparent;
+    padding: 1rem 1.5rem 1rem 1rem;
+}
+
+.LoginForm {
+    -webkit-animation: fadeIn 2s ease 0.3s;
+            animation: fadeIn 2s ease 0.3s;
+            z-index: 20;
+            background: linear-gradient(125deg, rgba(234, 105, 130, 0.6), rgba(135,77,
+            162, 0.8));
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+}
+
+.LoginForm .sign-up {
+    box-shadow: 0 0.8rem 3rem rgba(135, 77, 162, 0.6);
+    border-radius: 1rem;
+    background: #fdfbfb;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 55vh;
+    margin: 15vh auto;
+    padding: 8vh 6vh 8vh 6vh;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.LoginForm .sign-up h1{
+    font-weight: 800;
+    font-size: 4.5vh;
+    margin-bottom: 3vh;
+    background: linear-gradient(90deg, #ea6982 0%, #fe9a8b 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.LoginForm .sign-up .input {
+    display: block;
+    position: relative;
+}
+
+.LoginForm .sign-up .input:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.3vh;
+    background: linear-gradient(90deg, #ea6982, #fe9a8b);
+}
+
+.LoginForm .sign-up .input svg {
+    height: 3vh;
+    position: absolute;
+    top: 35%;
+    right: 0.5rem;
+    backbround: transparent;
+}
+
+.LoginForm .sign-up input {
+    display: block;
+    padding: 3.5vh;
+    font-size: 2.5vh;
+    background: transparent;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
