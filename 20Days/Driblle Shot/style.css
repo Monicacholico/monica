@@ -357,7 +357,7 @@ button {
     position: absolute;
     top: 35%;
     right: 0.5rem;
-    backbround: transparent;
+    background: transparent;
 }
 
 .LoginForm .sign-up input {
@@ -368,10 +368,68 @@ button {
     position: relative;
 }
 
+.LoginForm .sign-up button {
+    flex: none;
+    font-size: 2.3vh;
+    width: 70%;
+    color: #fdfbfb;
+    font-weight: 600;
+    margin-top: 5vh;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #ea6982 45%, #fe9a8b 130%);
+}
 
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform:
+        translateY(-50px);
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform:none;
+        transform: none;
+    }
 
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
 
+@-webkit-keyframes background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
 
 
 
