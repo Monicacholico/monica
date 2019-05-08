@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "GothamRounded";
+    src: url("https://zephyo.github.io/22Days/code/9/graphics/GothamRounded-Book.otf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "GothamRounded";
+    src: url("https://zephyo.github.io/22Days/code/9/graphics/GothamRounded-Medium.otf");
+    font-weight: bold;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 6vh;
+}
+
+body {
+    font-family: "GothamRounded";
+    position: relative;
+}
+
+.scroll-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+fieldset {
+    position: relative;
+    flex: none;
+    flex-basis: 100%;
+    padding-left: 15vh;
+    padding-right: 15vh;
+    padding-top: 9vh;
+}
+
+fieldset .input-holder {
+    margin-top: 10vh;
+}
+
+.btn-gender {
+    background: white;
+    border: 0.35vh solid;
+    color: #b2b4ba;
+    border-color: #b2b4ba;
+    border-radius: 10rem;
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+.btn-gender:hover {
+    border-color: #ffb199;
+    color: #ffb199;
+}
+
+.btn-gender.selected {
+    border-color: #ff0844;
+    color: #ff0844;
+}
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    padding: 5vh 5vh;
+    color: lightgray;
+    background: transparent;
+    font-size: 5vh;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 3vh;
+    left: 15vh;
+    width: calc(100% - 30vh);
+    color: white;
+    background: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+    border-radius: 10rem;
+    box-shadow: 0 0.4rem 1rem 0.1rem rgba(255, 8, 68, 0.3);
+}
+
+.img-picker-div {
+    position: absolute;
+    top: 18vh;
+    left: 15vh;
+    right: 15vh;
+    border: 0.3vh solid lightgrey;
+    border-radius: 0.6rem;
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn-picker {
+    background: linear-gradient(to bottom, #ff0844 0%, #ffb199 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 12vh;
+    height: 12vh;
+    font-size: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.hide-children label, .hide-children p {
+    display: none;
+}
+
+.progress, .progress-bar {
+    border-radius: 0;
+}
+
+.progress {
+    height: 8px;
+}
+
+.progress-bar {
+    width: 20%;
+    transition: width 1s ease;
+    background: #ff0844;
+}
+
+.final-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(to right, #ff0844, #ffb199);
+}
+
+.final-result h3 {
+    margin-bottom: 5vh;
+}
+
+.final-result .profile-pic {
+    background: white;
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    margin-bottom: 5vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.final-result .name {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.final-result .try-btn {
+    margin-top: 7vh;
+    color: white;
+    background: transparent;
+    border: 0.35vh solid white;
+    font-size: 0.9rem;
+    border-radius: 5rem;
+}
+
+
+
+
+
+
+
+
