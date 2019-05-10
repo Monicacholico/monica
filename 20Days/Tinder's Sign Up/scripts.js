@@ -67,3 +67,71 @@ function updateProgressBar(){
         'width': (currentForm + 1) / (maxForms + 1) * 100 + '%'
     });
 }
+
+function setUsername(input) {
+    username = input.value;
+}
+
+function setBday(input) {
+    bday = input.value;
+}
+
+function readURL(input){
+    if(input.files && input.files[0]){
+        var reader = new FileReader();
+
+        reader.onload = function(e){
+            $('.img-picker-div').css({'background-image': 'url(\''
+                    + e.target.result + '\')'}).addClass('hide-children');
+            image = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function refresh(){
+    history.go(0);
+}
+
+function validateInput(){
+    var inputs =
+        forms.eq(currentForm).find('input');
+    for(var i = 0; i < inputs.length; i++) {
+        if(!$inputs[i].val()){
+            $(inputs[i]).addClass('is-invalid');
+            return false;
+        }
+        else {
+            $(inputs[i]).addClass('is-invalid');
+        }
+    }
+    return true;
+}
+
+function showResult() {
+    var genderIco = '';
+    switch (gender){
+        case 'WOMAN':
+            genderIco = '<i class="fas fa-venus"></i>';
+            break;
+        case 'MAN':
+            genderIco = '<i class="fas fa-mars"></i>';
+            break;
+        case 'OTHER':
+            genderIco = '<i class="fas fa-transgender-alt"></i>';
+            break;
+    }
+
+    $(document.body).append(
+        '<div class="final-result">' +
+        '<h3>Final Results</h3>' +
+        '<div class="profile-pic"></div>' +
+        '<p class="name">' + username + '</p>' +
+        '<span>' + genderIco + ', born on' + bday + '</span>' +
+        '<button class="\'btn try-btn\' + '</div>'
+    );
+    $('.profile-pic').css({
+        'background-image':
+        'url(\'' + image +' \')'
+    });
+}
