@@ -3,12 +3,14 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
-    onSearchSubmit(term){
-       axios.get("https://api.unsplash.com/search/photos", {
+    async onSearchSubmit(term){
+       const response = await axios.get("https://api.unsplash.com/search/photos", {
+           params: { query: term},
            headers: {
-               Authorization: 'Client-ID'
+               Authorization: 'Client-ID dcbd5da81aeb61c0aa1f87c44732dff802c0d102036dca7a0d8df29246c32928'
            }
            });
+       console.log(response.data.results)
     }
     render(){
     return(
