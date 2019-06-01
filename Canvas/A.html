@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with Canvas HTML</title>
+    <style>
+        #myCanvas {
+            border: solid 1px #e3d2d2;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1200" height="1200">
+
+    <canvas id="anotherCanvas" width="200" height="200"></canvas>
+
+
+
+</canvas>
+<p></p>
+
+
+
+
+<script>
+
+    var context = document.getElementById("myCanvas").getContext("2d");
+
+    var width = 225;
+    var height = 105;
+    var padding = 20;
+
+    // To Draw
+
+    context.beginPath();
+    context.moveTo(padding + width/2, padding);
+    context.lineTo(padding + width, padding + height );
+    context.lineTo( padding, height + padding );
+    context.closePath();
+
+
+
+
+    // context.beginPath();
+    // context.moveTo (padding + width * 3, padding);
+    // context.lineTo (padding + height);
+    // context.lineTo (padding + widht);
+    // context.lineTo (padding + height);
+    // // context.lineTo (padding + width);
+    // context.closePath();
+
+
+    // To Fill
+
+    context.fillStyle = "#ee5967";
+    context.fill();
+
+
+
+
+    var c = document.getElementById("anotherCanvas").getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100,75, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+
+</script>
+</body>
