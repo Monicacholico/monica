@@ -7,20 +7,20 @@
         #myCanvas {
             border: solid 1px #e3d2d2;
         }
+
+        #anotherCanvas {
+            border: solid 2px yellow;
+        }
     </style>
 </head>
 <body>
 
-<canvas id="myCanvas" width="1200" height="1200">
+<canvas id="myCanvas" width="1200" height="1200"></canvas>
+
+<canvas id="anotherCanvas" width="800" height="800"></canvas>
 
 
-
-
-
-</canvas>
-
-<canvas id="anotherCanvas" width="200" height="200"></canvas>
-<p></p>
+<p>hello world</p>
 
 
 
@@ -42,11 +42,11 @@
     context.closePath();
 
 
-    var secondContext = document.getElementById("myCanvas").getContext("2d");
+    var secondContext = document.getElementById("anotherCanvas").getContext("2d");
 
-    var widthSecond = 350;
-    var heightSecond = 150;
-    var paddingSecond = 350;
+    var widthSecond = 225;
+    var heightSecond = 105;
+    var paddingSecond = 120;
 
     secondContext.beginPath();
     secondContext.moveTo(paddingSecond + widthSecond/2, paddingSecond);
@@ -71,14 +71,17 @@
     context.fill();
 
 
-    secondContext.fillStyle = yellow;
+    secondContext.fillStyle = "#ee5967";
     context.fill();
 
 
-    var c = document.getElementById("anotherCanvas").getContext("2d");
+    var ctx = document.getElementById("anotherCanvas").getContext("2d");
     ctx.beginPath();
     ctx.arc(100,75, 50, 0, 2 * Math.PI);
     ctx.stroke();
+
+    ctx.fillStyle = "#e8e8e8";
+    ctx.fill();
 
 
 
