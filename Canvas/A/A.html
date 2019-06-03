@@ -67,6 +67,10 @@
     context.fill();
 
 
+    context.rotate(20 * Math.PI / 180);
+    context.fillRect(190, 60, 200, 100);
+
+
 ////////// Second Canvas ///////////////////
 
 
@@ -128,11 +132,11 @@
 
 
     ctx.beginPath();
-    ctx.moveTo(60, 30);
-    ctx.lineTo(275, 30);
-    ctx.lineTo(100, 5);
-    ctx.lineTo(50, 430);
-    ctx.lineTo(350, 280);
+    ctx.moveTo(250 * 2, 600);
+    ctx.lineTo(650, 150);
+    ctx.lineTo(810, 500);
+    // ctx.lineTo(-250, 200);
+    // ctx.lineTo(350, 280);
     ctx.closePath();
 
     ctx.lineWidth = 5;
