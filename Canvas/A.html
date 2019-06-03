@@ -13,11 +13,13 @@
 
 <canvas id="myCanvas" width="1200" height="1200">
 
-    <canvas id="anotherCanvas" width="200" height="200"></canvas>
+
 
 
 
 </canvas>
+
+<canvas id="anotherCanvas" width="200" height="200"></canvas>
 <p></p>
 
 
@@ -29,7 +31,7 @@
 
     var width = 225;
     var height = 105;
-    var padding = 20;
+    var padding = 420;
 
     // To Draw
 
@@ -39,6 +41,18 @@
     context.lineTo( padding, height + padding );
     context.closePath();
 
+
+    var secondContext = document.getElementById("myCanvas").getContext("2d");
+
+    var widthSecond = 350;
+    var heightSecond = 150;
+    var paddingSecond = 350;
+
+    secondContext.beginPath();
+    secondContext.moveTo(paddingSecond + widthSecond/2, paddingSecond);
+    secondContext.lineTo(paddingSecond + widthSecond, paddingSecond + heightSecond);
+    secondContext.lineTo(paddingSecond, heightSecond + paddingSecond);
+    secondContext.closePath();
 
 
 
@@ -57,12 +71,18 @@
     context.fill();
 
 
+    secondContext.fillStyle = yellow;
+    context.fill();
 
 
     var c = document.getElementById("anotherCanvas").getContext("2d");
     ctx.beginPath();
     ctx.arc(100,75, 50, 0, 2 * Math.PI);
     ctx.stroke();
+
+
+
+
 
 </script>
 </body>
