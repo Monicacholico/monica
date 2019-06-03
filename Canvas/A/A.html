@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with Canvas HTML</title>
+    <style>
+        #myCanvas {
+            border: solid 1px #e3d2d2;
+        }
+
+        #anotherCanvas {
+            border: solid 2px yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="spinner">
+<canvas id="myCanvas" width="1200" height="1200"></canvas>
+</div>
+<div>
+<canvas id="anotherCanvas" width="800" height="800"></canvas>
+</div>
+
+<p>hello world</p>
+
+
+
+
+<script>
+
+    var canvas = document.getElementById("myCanvas");
+
+    var context = canvas.getContext("2d");
+
+    var width = 225;
+    var height = 105;
+    var padding = 420;
+
+    // To Draw Triangle
+
+    context.beginPath();
+    context.moveTo(padding + width/2, padding);
+    context.lineTo(padding + width, padding + height );
+    context.lineTo( padding, height + padding );
+    context.closePath();
+    context.fillStyle = "#e8e8e8";
+
+    // To Fill
+
+    context.fill();
+    context.stroke();
+
+
+    // To Draw Circle
+
+    context.beginPath();
+    context.arc(400,375, 50, 0, 2 * Math.PI);
+    context.closePath();
+    context.fillStyle = "#ee5967";
+    context.strokeStyle = "#e5e5e5";
+
+
+    // To Fill
+
+    context.stroke();
+    context.fill();
+
+
+////////// Second Canvas ///////////////////
+
+
+
+    var canvasTwo = document.getElementById("anotherCanvas");
+    var ctx = canvasTwo.getContext("2d");
+
+
+
+    /////////////// First Shape ////////////////
+
+    ctx.beginPath();
+    ctx.arc(500,175, 50, 0, 2 * Math.PI);
+    ctx.closePath();
+
+    ctx.lineWidth = 5;
+    ctx.fillStyle = "#ee5967";
+    ctx.strokeStyle = '#ffff98';
+
+    ctx.fill();
+    ctx.stroke();
+
+/////////// Second Shape //////////////
+
+    ctx.beginPath();
+    ctx.moveTo(160, 130);
+    ctx.lineTo(75, 200);
+    ctx.lineTo(150, 275);
+    ctx.lineTo(250, 230);
+    ctx.closePath();
+
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#333";
+    ctx.fillStyle = "#FFCC00";
+
+    ctx.fill();
+    ctx.stroke();
+
+
+//////////// Third Shape /////////////
+
+    ctx.beginPath();
+    ctx.moveTo(50, 450);
+    ctx.lineTo(450, 300);
+    ctx.closePath();
+
+    ctx.lineWidth = 45;
+    ctx.strokeStyle = "steelblue";
+    ctx.fillStyle = "#ee5967";
+
+
+    ctx.stroke();
+
+
+
+
+//    Fourth Shape ///////////////
+
+
+
+    ctx.beginPath();
+    ctx.moveTo(60, 30);
+    ctx.lineTo(275, 30);
+    ctx.lineTo(100, 5);
+    ctx.lineTo(50, 430);
+    ctx.lineTo(350, 280);
+    ctx.closePath();
+
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#e56790";
+    ctx.fillStyle = "#e56789";
+
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.stroke();
+    ctx.fill();
+
+
+
+
+
+
+</script>
+</body>
