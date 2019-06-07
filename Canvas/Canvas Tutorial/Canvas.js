@@ -69,6 +69,17 @@ var mouse = {
     y: undefined
 };
 
+var maxRadius = 40;
+var minRadius = 2;
+
+var colorArray = [
+    '#ffaa33',
+    '#ab6982',
+    '#00ff00',
+    '#4411aa',
+    '#ff11ff'
+];
+
 window.addEventListener("mousemove",
     function(event){
     mouse.x = event.x;
@@ -83,11 +94,12 @@ function Circle(x, y, dx, dy, radius) {
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
+    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     this.draw = function(){
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.strokeStyle = "#ea6982";
+        c.fillStyle = this.color;
         c.stroke();
         c.fill();
     };
@@ -103,11 +115,13 @@ function Circle(x, y, dx, dy, radius) {
         this.y += this.dy;
 
         // interactivity
-        if (mouse.x - this.x < 50 && mouse.y - this.x > -50 &&
+        if (mouse.x - this.x < 50 && mouse.x - this.x > -50 &&
         mouse.y - this.y < 50 && mouse.y - this.y > -50
         ){
-            this.radius += 1;
-        } else if (this.radius > 2){
+            if(this.radius < maxRadius){
+                this.radius += 1;
+            }
+        } else if (this.radius > minRadius){
             this.radius -= 1;
         }
         this.draw();
