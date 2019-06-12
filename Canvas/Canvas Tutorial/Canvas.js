@@ -73,11 +73,11 @@ var maxRadius = 40;
 // var minRadius = 2;
 
 var colorArray = [
-    '#f0948a',
-    '#f35f6a',
-    '#e2515a',
-    '#fc737f',
-    '#ff8893'
+    '#d95560',
+    '#f2949c',
+    '#03738c',
+    '#04c4d9',
+    '#0396a6'
 ];
 
 window.addEventListener("mousemove",
