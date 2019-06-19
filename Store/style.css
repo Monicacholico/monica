@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.menu-are li a{
+    text-decoration: none;
+}
+
+.menu-area li{
+    list-style: none;
+}
+
+.custom-padding {
+    padding-top: 25px;
+}
+
+nav {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    text-align: center;
+    z-index: 1;
+    background: #ea6982;
+    margin: 0 auto;
+    width: calc(100% - 60px);
+
+}
