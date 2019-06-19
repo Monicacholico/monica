@@ -30,8 +30,15 @@
         const noModels = brands.map(brand => `${brand.name} has ${brand.models}`);
         console.log(noModels);
 
-        const orderByName = brands.sort(brand =>(brand.year ? 1 : -1))
-        console.log(orderByName);
+        // const orderByName = brands.sort((a, b) =>(a.year ? 1 : -1));x
+        const orderByName = brands.sort(function(firstModel, secondModel){
+            if(firstModel.name > secondModel.name){
+                return 1
+            } else {
+                return -1
+            }
+        });
+        console.table(orderByName);
 
 
 
