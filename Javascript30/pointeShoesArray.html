@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Pointe Shoes</title>
+</head>
+<body>
+
+    <h3>Everything to look is at the console!</h3>
+    <script>
+        const brands = [
+            { name: 'Bloch', origin: 'Australia', year: 1932, models: 12 },
+            { name: 'Capezio', origin: 'Italy', year: 1887, models: 8 },
+            { name: 'Grishko', origin: 'Russia', year: 1988, models: 10 },
+            { name: 'Russian Pointe', origin: 'Russia', year: 1867, models: 10 },
+            { name: 'Sansha', origin: 'France', year: 1945, models: 14 },
+            { name: 'So Danca', origin: 'Brazil', year: 1980, models: 8 },
+            { name: 'Wear Moi', origin: 'France', year: 1858, models: 6 },
+            { name: 'Repetto', origin: 'France', year: 1990, models: 9 },
+            { name: 'Chacott', origin: 'Japan', year: 1950, models: 8 },
+            { name: 'Gaynor Minden.', origin: 'USA', year: 1993, models: 4 },
+            { name: 'Suffolk', origin: 'England', year: 2000, models: 6 },
+            { name: 'Porselli', origin: 'Italy', year: 1919, models: 12 }
+        ];
+
+
+        const newest = brands.filter(brand => (brand.year > 1800 && brand.year < 1950));
+        console.log(newest);
+
+        const noModels = brands.map(brand => `${brand.name} has ${brand.models}`);
+        console.log(noModels);
+
+        const orderByName = brands.sort(brand =>(brand.year ? 1 : -1))
+        console.log(orderByName);
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
