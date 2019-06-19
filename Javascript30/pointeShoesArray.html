@@ -30,7 +30,9 @@
         const noModels = brands.map(brand => `${brand.name} has ${brand.models}`);
         console.log(noModels);
 
-        // const orderByName = brands.sort((a, b) =>(a.year ? 1 : -1));x
+        const orderByYear = brands.sort((a, b) => (a.year > b.year ? 1 : -1));
+        console.table(orderByYear);
+
         const orderByName = brands.sort(function(firstModel, secondModel){
             if(firstModel.name > secondModel.name){
                 return 1
@@ -40,7 +42,10 @@
         });
         console.table(orderByName);
 
+        const orderbyOrigin = brands.sort((a,b) => (a.origin > b.origin ? 1 : -1));
+        console.table(orderbyOrigin);
 
+        /// pending reduce
 
 
 
