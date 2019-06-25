@@ -2,10 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Practice Take 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<div class="background"></div>
-<div id="app"></div>
+
+<header>
+    <nav class="nav">
+            <img id="logo" src="github-icon.png" alt="LOGO">
+            <a href="#">FAQ</a>
+            <a href="#">Generic Schedule</a>
+            <a href="#">Generic Text</a>
+    </nav>
+    <div class="paragraph-1">
+        <p class="paragraph-1">Text <strong>Everyday, Everything, Everywhere</strong> <br />
+            and your generic text <strong>fully-funded Text</strong></p>
+    </div>
+    <div class="user-form">
+        <form>
+            <input class="user-input" id="valid-email" type="ea" name="email" placeholder="Email address" required/>
+
+            <select class="user-input" id="dist-sel" required>
+                <option selected disabled>Select your District</option>
+                <option value="1">District 1</option>
+                <option value="2">District 2</option>
+                <option value="3">District 3</option>
+                <option value="4">District 4</option>
+                <option value="5">District 5</option>
+                <option value="6">District 6</option>
+                <option value="7">District 7</option>
+                <option value="8">District 8</option>
+                <option value="9">District 9</option>
+                <option value="10">District 10</option>
+            </select>
+
+            <button type="button" class="user-input button" id="go-btn" onClick="buttonCheck();">GO</button>
+        </form>
+    </div>
+    <div>
+        <p class="center-txt">
+            <input type="checkbox" name="info" value="info" checked>
+            <strong>I'd like to receive Generic Text about this program</strong>
+        </p>
+    </div>
+
+</header>
+<section>
+    <div class="wrapper">
+        <div class="counter">
+            <h3 class="title-counter" >There are <br/> currently<br/> <span id="count"></span> <br/> Pledges from<br/> the 10 <br/>District</h3>
+        </div>
+        <div class="district-list">
+            <p class="title-pledges">LEADERBOARD</p>
+            <ul>
+                <li class="pledges">
+                        <span class="pledge district">District 1</span>
+                        <span class="pledge pledge-bar" id="bar1">#</span>
+                        <span class="pledge dist_count" id="d1" /></span>
+                </li>
+                <li class="pledges">
+                        <span class="pledge district">District 2</span>
+                        <span class="pledge pledge-bar" id="bar2">#</span>
+                        <span class="pledge dist_count" id="d2" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 3</span>
+                    <span class="pledge pledge-bar" id="bar3">#</span>
+                    <span class="pledge dist_count" id="d3" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 4</span>
+                    <span class="pledge pledge-bar" id="bar4">#</span>
+                    <span class="pledge dist_count" id="d4" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 5</span>
+                    <span class="pledge pledge-bar" id="bar5">#</span>
+                    <span class="pledge dist_count" id="d5" /></span>
+
+                </li>
+                <li class="pledges" >
+                    <span class="pledge district">District 6</span>
+                    <span class="pledge pledge-bar" id="bar6">#</span>
+                    <span class="pledge dist_count" id="d6" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 7</span>
+                    <span class="pledge pledge-bar" id="bar7">#</span>
+                    <span class="pledge dist_count" id="d7" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 8</span>
+                    <span class="pledge pledge-bar" id="bar8">#</span>
+                    <span class="pledge dist_count" id="d8" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 9</span>
+                    <span class="pledge pledge-bar" id="bar9">#</span>
+                    <span class="pledge dist_count" id="d9" /></span>
+                </li>
+                <li class="pledges">
+                    <span class="pledge district">District 10</span>
+                    <span class="pledge pledge-bar" id="bar10">#</span>
+                    <span class="pledge dist_count" id="d10" /></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</section>
+
+<footer class="footer">
+    &#9400; 2015 Generic Text
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
