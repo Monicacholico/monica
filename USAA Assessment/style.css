@@ -68,10 +68,11 @@ header {
 .button {
     height: 40px;
     background-color: #ffffff;
-    width: 100px;
+    width: 150px;
     color: #004b8e;
     font-weight: bold;
-    border-radius: 5%;
+    border-radius: .3rem;
+    border-style: none;
 }
 
 .for-checkbox {
@@ -90,7 +91,10 @@ small {
     text-align: center;
     height: 100%;
     min-height: 500px;
-    width: 100%
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .title-pledges {
@@ -126,7 +130,7 @@ li {
 }
 .counter {
     width: 50%;
-    float: left;
+
 }
 
 #count {
@@ -138,7 +142,6 @@ li {
 
 .district-list {
     width: 50%;
-    float: right;
     align-content: center;
     font-size: 1em;
     height: 80%;
@@ -174,13 +177,6 @@ li {
     text-align: center
 }
 
-.button {
-    background-color: #FFFFFF;
-    width: 200px;
-    color: #4d7abc;
-    font-weight: 600;
-}
-
 .pledges-count {
     font-size: 13px;
     font-weight: 600;
@@ -199,13 +195,12 @@ li {
     padding: 30px;
 }
 
-@media only screen and(min-width: 300px){
+
+@media only screen and (max-width: 600px){
     .counter {
-        display: flex;
         width: 100%;
     }
     .district-list {
-        display: flex;
         width: 100%;
     }
 }
