@@ -181,20 +181,6 @@ li {
     font-weight: 600;
 }
 
-#dist-sel {
-    background-image:url('../images/downarrow.png');
-    background-repeat: no-repeat;
-    background-position: 93% 50%;
-    padding-right: 45px;
-}
-
-#lb-txt {
-    color: #FFFFFF;
-    padding: 12px;
-    font-size: 20px;
-}
-
-
 .pledges-count {
     font-size: 13px;
     font-weight: 600;
@@ -223,8 +209,4 @@ li {
         width: 100%;
     }
 }
-
-
-
-
 
