@@ -198,10 +198,31 @@ li {
 
 @media only screen and (max-width: 600px){
     .counter {
+        margin-top: 15%;
         width: 100%;
+        text-align: left;
     }
     .district-list {
         width: 100%;
+        position: relative;
+        margin-left: 0;
+    }
+
+    .logo{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    nav {
+        padding: 0;
+        text-align: left;
+    }
+    nav a {
+        float: right;
+        font-size: xx-small;
+        margin: 2px;
+        display: block;
     }
 }
 
