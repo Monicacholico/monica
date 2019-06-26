@@ -60,7 +60,7 @@ header {
     border-style: none;
     color: #4d7abc;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     margin: 2px;
 }
 
@@ -91,17 +91,13 @@ small {
     height: 100%;
     min-height: 500px;
     width: 100%
-    /*background-image: url("recycle-circle.png");*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: 50% 40%;*/
 }
 
 .title-pledges {
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 85px;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
-    /*padding: 12px;*/
     color: #fff;
 
 }
@@ -131,7 +127,6 @@ li {
 .counter {
     width: 50%;
     float: left;
-    /*border-right: 2px solid #ffffff;*/
 }
 
 #count {
@@ -182,7 +177,7 @@ li {
 .button {
     background-color: #FFFFFF;
     width: 200px;
-    color: #4272B4;
+    color: #4d7abc;
     font-weight: 600;
 }
 
@@ -212,20 +207,21 @@ li {
 .footer {
     background-color: #FFFFFF;
     text-align: center;
-    color: #4272B4;
+    color: #4d7abc;
     font-size: 16px;
     font-weight: bold;
     padding: 30px;
 }
 
-@media only screen and(max-width: 600px){
+@media only screen and(min-width: 300px){
     .counter {
+        display: flex;
         width: 100%;
     }
     .district-list {
+        display: flex;
         width: 100%;
     }
-
 }
 
 
