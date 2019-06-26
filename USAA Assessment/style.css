@@ -8,12 +8,15 @@ body{
     padding: 0;
     margin: 0;
 
-
 }
 
 
 .logo {
+    position: relative;
+    top: -50px;
+    left: -50px;
     float: left;
+    width: 55px;
 }
 
 nav {
@@ -24,14 +27,208 @@ nav {
 nav a {
     text-decoration: none;
     color: #b2b4ba;
-    margin: 15px;
+    margin: 0;
+    padding: 15px;
 }
 
 header {
     background-color: #4071b6;
     background-image: url("recycle-back.png");
     background-repeat: no-repeat;
-    height: 400px
+    background-size: 450px;
+    height: 350px;
+    width: 100%;
 }
+
+.aligning {
+    text-align: center;
+}
+
+.paragraph{
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: "Opens Sans", sans-serif;
+}
+
+.user-form{
+    height: 40px;
+    width: 150px;
+    background-color: #004b8e;
+    border-radius: .3rem;
+    border-style: none;
+    color: #4d7abc;
+    text-align: center;
+    padding: 0px;
+    margin: 2px;
+}
+
+
+.button {
+    height: 40px;
+    background-color: #ffffff;
+    width: 100px;
+    color: #004b8e;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+.for-checkbox {
+    text-align: center;
+    color: #ffffff;
+    margin: 20px;
+}
+
+small {
+    color: #ffffff;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    margin: 50px;
+    text-align: center;
+    height: 100%;
+    min-height: 500px;
+    width: 100%
+    /*background-image: url("recycle-circle.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 50% 40%;*/
+}
+
+.title-pledges {
+    margin-top: 0px;
+    margin-left: 85px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    /*padding: 12px;*/
+    color: #fff;
+
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    margin-top: -10px;
+}
+
+.pledges-list {
+    margin-left: 55px;
+    align-content: center;
+    font-size: 2em;
+    height: 80%;
+    padding: 0;
+}
+
+.title-counter {
+    color: #fff;
+    font-size: 36px;
+    border-right: 2px solid #ffffff;
+}
+.counter {
+    width: 50%;
+    float: left;
+    /*border-right: 2px solid #ffffff;*/
+}
+
+#count {
+    font-size: 120px;
+    font-weight: bold;
+    color: #62FDAB;
+}
+
+
+.district-list {
+    width: 50%;
+    float: right;
+    align-content: center;
+    font-size: 1em;
+    height: 80%;
+    text-align: left;
+    color: #fff;
+}
+
+
+.district {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    padding: 5px;
+    background-color: #4272B4;
+    color: #084D8C;
+    display:inline-block;
+    width: 90px;
+}
+
+
+.darkblue-bar {
+    background-color: #004b8e;
+    color: #084D8C;
+    display:inline-block;
+    width: 15px;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    margin-left: -5px;
+}
+
+
+.user-form {
+    text-align: center
+}
+
+.button {
+    background-color: #FFFFFF;
+    width: 200px;
+    color: #4272B4;
+    font-weight: 600;
+}
+
+#dist-sel {
+    background-image:url('../images/downarrow.png');
+    background-repeat: no-repeat;
+    background-position: 93% 50%;
+    padding-right: 45px;
+}
+
+#lb-txt {
+    color: #FFFFFF;
+    padding: 12px;
+    font-size: 20px;
+}
+
+
+.pledges-count {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    color: #96B1D5;
+    display:inline-block;
+    width: 90px;
+}
+
+.footer {
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #4272B4;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+@media only screen and(max-width: 600px){
+    .counter {
+        width: 100%;
+    }
+    .district-list {
+        width: 100%;
+    }
+
+}
+
+
+
 
 
