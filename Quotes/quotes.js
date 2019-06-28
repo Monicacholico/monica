@@ -121,4 +121,27 @@ function displayQuote(quotes) {
     mediumBubble.style.background = quote.color;
     var smallBubble = document.getElementById("smallBubble");
     smallBubble.style.background = quote.color;
+    smallBubble.style.width = 55 +"px";
+
+
 }
+
+
+// var width = 0;
+// var height = 0;
+// var animateSizing = setInterval(animate, 20)
+// function animate(){
+//     width++;
+//     height++;
+//     var buble = document.getElementsByTagName("div");
+//     buble.style.width = width + 'px';
+//     if(buble.style.width < 15 +"px" && buble.style.height < 15 + "px"){
+//         buble.style.width = 55 + "px";
+//     }
+//     console.log(buble);
+//     clearInterval(animateSizing);
+// }
+//
+// window.onload = function(){
+//     animate();
+// };
