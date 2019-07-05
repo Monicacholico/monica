@@ -129,7 +129,7 @@ function displayQuote(quotes) {
 
 // var width = 0;
 // var height = 0;
-// var animateSizing = setInterval(animate, 20)
+// var animateSizing = setInterval(animate, 20);
 // function animate(){
 //     width++;
 //     height++;
