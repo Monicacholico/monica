@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>👀👀👀Follow Along Nav</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="followalong.css">
 </head>
 <body>
 
@@ -27,6 +27,32 @@
 
 <script>
     // 👀👀👀👀👀👀👀👀👀👀👀👀👀👀👀
+
+    const triggers = document.querySelectorAll('a');
+    const highlight = document.createElement('span');
+    highlight.classList.add('highlight');
+    document.body.append(highlight);
+
+    function hightlightLink(){
+        const linkCoords = this.getBoundingClientRect();
+        console.log(linkCoords);
+        const coords = {
+            width: linkCoords.width,
+            height: linkCoords.height,
+            top: linkCoords.top - window.scrollY,
+            left: linkCoords.left - window.scrollX
+
+        };
+
+        highlight.style.width = `${linkCoords.width}px`;
+        highlight.style.height =  `${linkCoords.height}px`;
+        highlight.style.transform = `translate(${linkCoords.left}px, ${linkCoords.top}px)`;
+    }
+
+    triggers.forEach(a => a.addEventListener('mouseenter', hightlightLink));
+
+
+
 </script>
 </body>
 </html>
