@@ -1,54 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
-    width: 100%;
-    /*display: grid;*/
-    /*grid-template-columns: 2fr 1fr 1fr ;*/
-    /*grid-template-rows: auto 1fr 3fr;*/
+    /*width: 100%;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto 1fr 3fr;
     background-color: #b2b4ba;
-    /*height: 900px;*/
+    height: auto;
 }
 
-.main-content-one{
-    width: 50%;
-    float:right;
-    background-color: #4d7abc;
-    height:200px;
-}
+/*.main-content-one{*/
+    /*width: 50%;*/
+    /*float:right;*/
+    /*background-color: #4d7abc;*/
+    /*height:200px;*/
+/*}*/
 
-.other-content {
-    width: 50%;
-    float: left;
-    background-color: #ea6982;
-    height: 200px;
-}
+/*.other-content {*/
+    /*width: 50%;*/
+    /*float: left;*/
+    /*background-color: #ea6982;*/
+    /*height: 200px;*/
+/*}*/
 
 .site {
     background-color: #4d7abc;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 3fr;
-    grid-template-areas:
-        "title title title"
-        "main header header"
-        "main sidebar footer"
+    /*grid-template-areas:*/
+        /*"title title title"*/
+        /*"main header header"*/
+        /*"main sidebar footer"*/
 }
 
 .masthead {
     background-color: #b2b4ba;
-    /*grid-column: 2/4;*/
-    /*grid-row: 2/3;*/
-    grid-area: header;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    /*grid-area: header;*/
 }
 
 .page-title {
     background-color: #4d7abc;
-    /*grid-column: 1/4;*/
-    /*grid-row: 1/2;*/
-    grid-area: title;
+    grid-column: 1/1;
+    grid-row: 1/2;
+    /*grid-area: title;*/
 }
 
 .main-content {
     background-color: #ea6982;
-    /*grid-column: 1/2;*/
-    /*grid-row: 2/4;*/
-    grid-area: main;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: 500px;
+    /*grid-area: main;*/
+}
+
+.sidebar {
+    background-color: #5bc0de;
+    /*grid-area: sidebar;*/
+
+}
+
+.footer {
+    background-color: #843534;
+    /*grid-area: footer;*/
 }
