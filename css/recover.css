@@ -52,6 +52,14 @@ html {
     background-color: #BA9487;
 }
 
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    grid-gap:10px 15px;
+    background-color: #ce8483;
+    height: 600px;
+}
+
 /*.main-content-one{*/
     /*width: 50%;*/
     /*float:right;*/
