@@ -1,4 +1,7 @@
 
+// Crear element data url en cada elemento
+// set url to button if data url ===
+
 class Dropdown {
     constructor() {
         this.SPACEBAR_KEY_CODE = [0, 32];
@@ -26,6 +29,8 @@ class Dropdown {
                                             );
         this.dropdownArrow.addEventListener('keydown', this.toggleListVisibility);
 
+        this.dropdownSelectedNode.addEventListener('click', this.urlDirector);
+
     }
 
     keyboardHandler() {
@@ -33,6 +38,8 @@ class Dropdown {
             item.addEventListener('click', e => {
                 this.setSelectedListItem(e);
                 this.closeList();
+                this.linkSelection();
+                this.urlDirector();
             });
             item.addEventListener('keydown', e => {
                 switch (e.keyCode) {
@@ -118,44 +125,62 @@ class Dropdown {
             }
         }
     }
+
+    linkSelection() {
+        const yachtVendor = 'https://www.planeta-mujer.org';
+        const progressiveUrl = 'https://www.feel-like-dancing.com'
+        const selections = document.querySelectorAll('.dropdown_list-item');
+        const allSelections = Array.prototype.slice.call(selections);
+        allSelections.map( selection => {
+            selection.id === 'option-6' ? 
+            selection.setAttribute('data-url', `${yachtVendor}`) : 
+            selection.setAttribute('data-url', `${progressiveUrl}`);
+        })
+        console.log(allSelections);
+        console.table(allSelections);
+    }
+
+    urlDirector() {
+        const gotoUrlBtn = document.getElementById('url');
+        const selections = document.querySelectorAll('.dropdown_list-item');
+        const allSelections = Array.prototype.slice.call(selections);
+        const dropdownSelectedNode = document.querySelector('#dropdown_selected');
+        console.log(gotoUrlBtn);
+        gotoUrlBtn.addEventListener('click', function() {
+            if(dropdownSelectedNode.textContent === 'Yacht') {
+                console.log(allSelections[5].getAttribute('data-url'));
+                gotoUrlBtn.setAttribute('href', `${allSelections[5].getAttribute('data-url')}`);
+            }
+        })
+    }
+
+
     
 }
 
 new Dropdown();
 
 
-class LinkSelector{
-    constructor(option) {
-        this.button = document.querySelector('#url');
-        console.log(this.button);
-        this.option = option;
-        this.build();
-    }
-    build() {
-        var self = this;
-        self.button.addEventListener('click', function() {
-            var dropdownSelection = document.querySelector('#dropdown_selected').textContent;
-            if (dropdownSelection === 'Personal Watercraft') {
-                var url = self.option.personalWatercraft.url;
-                self.button.setAttribute('href', `${url}`);
-            }
-            if (dropdownSelection === 'Motorboat') {
-                var url = self.option.motorBoat.url;
-                self.button.setAttribute('href', `${url}`);
-            }
-        });
-
-    }
-}
-
-// var dropdownOptions = new LinkSelector({
-//     personalWatercraft: {
-//         type: 'Personal Watercraft',
-//         url: 'https://www.usaa.com'
-//     },
-//     motorBoat: {
-//         type: 'Motorboat',
-//         url: 'https://www.feel-like-dancing.com'
+// class LinkSelector{
+//     constructor(option) {
+//         this.button = document.querySelector('#url');
+//         console.log(this.button);
+//         this.option = option;
+//         this.build();
 //     }
+//     build() {
+//         var self = this;
+//         self.button.addEventListener('click', function() {
+//             var dropdownSelection = document.querySelector('#dropdown_selected').textContent;
+//             if (dropdownSelection === 'Personal Watercraft') {
+//                 var url = self.option.personalWatercraft.url;
+//                 self.button.setAttribute('href', `${url}`);
+//             }
+//             if (dropdownSelection === 'Motorboat') {
+//                 var url = self.option.motorBoat.url;
+//                 self.button.setAttribute('href', `${url}`);
+//             }
+//         });
 
-// })
+//     }
+// }
