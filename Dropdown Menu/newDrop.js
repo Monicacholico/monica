@@ -1,4 +1,7 @@
 
+// Crear element data url en cada elemento
+// set url to button if data url ===
+
 class Dropdown {
     constructor() {
         this.SPACEBAR_KEY_CODE = [0, 32];
@@ -26,6 +29,8 @@ class Dropdown {
                                             );
         this.dropdownArrow.addEventListener('keydown', this.toggleListVisibility);
 
+        this.list.addEventListener('click', this.urlDirector);
+
     }
 
     keyboardHandler() {
@@ -33,6 +38,8 @@ class Dropdown {
             item.addEventListener('click', e => {
                 this.setSelectedListItem(e);
                 this.closeList();
+                this.linkSelection();
+                this.urlDirector();
             });
             item.addEventListener('keydown', e => {
                 switch (e.keyCode) {
@@ -118,6 +125,35 @@ class Dropdown {
             }
         }
     }
+
+    linkSelection() {
+        const yachtVendor = 'https://www.planeta-mujer.org';
+        const progressiveUrl = 'https://www.feel-like-dancing.com'
+        const selections = document.querySelectorAll('.dropdown_list-item');
+        const allSelections = Array.prototype.slice.call(selections);
+        allSelections.map( selection => {
+            selection.id === 'option-6' ? 
+            selection.setAttribute('data-url', `${yachtVendor}`) : 
+            selection.setAttribute('data-url', `${progressiveUrl}`);
+        })
+        console.log(allSelections);
+        console.table(allSelections);
+    }
+
+    urlDirector(e) {
+        const gotoUrlBtn = document.getElementById('url');
+        gotoUrlBtn.setAttribute('href', e.target.dataset.url);
+        // gotoUrlBtn.addEventListener('click', function(e) {
+            // if(dropdownSelectedNode.textContent === 'Yacht') {
+            //     console.log(allSelections[5].dataset.url);
+            //     gotoUrlBtn.setAttribute('href', `${allSelections[5].dataset.url}`);
+            // }
+            // console.log(e.target);
+
+        // })
+
+        
+    }
     
 }
 
@@ -125,81 +161,25 @@ new Dropdown();
 
 
 // class LinkSelector{
-//     constructor(dropdownItem) {
-//         let allOptions = document.querySelectorAll('.dropdown_list-item');
-//         this.option = Array.prototype.slice.call(allOptions);
-//         console.log(this.option);
-//         this.type = dropdownItem.type;
-//         this.url = dropdownItem.url || 'https://www.usaa.com/inte/wc/hurricane-preparedness';
-//         this.linkHandler();
+//     constructor(option) {
+//         this.button = document.querySelector('#url');
+//         console.log(this.button);
+//         this.option = option;
+//         this.build();
 //     }
-//     linkHandler() {
-//         const gotoBtn = document.getElementById('url');
-//         // allOptions.map( option => {
-//         //     option.setAttribute('href', `${this.url}`);
-//         // })
-//         if(this.option[0]){
-//             gotoBtn.setAttribute('href', `${this.url}`);
-//         }
+//     build() {
+//         var self = this;
+//         self.button.addEventListener('click', function() {
+//             var dropdownSelection = document.querySelector('#dropdown_selected').textContent;
+//             if (dropdownSelection === 'Personal Watercraft') {
+//                 var url = self.option.personalWatercraft.url;
+//                 self.button.setAttribute('href', `${url}`);
+//             }
+//             if (dropdownSelection === 'Motorboat') {
+//                 var url = self.option.motorBoat.url;
+//                 self.button.setAttribute('href', `${url}`);
+//             }
+//         });
 
 //     }
 // }
-
-class LinkSelector{
-    constructor(option) {
-        this.button = document.querySelector('#url');
-        console.log(this.button);
-        this.option = option;
-        this.build();
-    }
-    build() {
-        var self = this;
-        self.button.addEventListener('click', function() {
-            var dropdownSelection = document.querySelector('#dropdown_selected').textContent;
-            if (dropdownSelection === 'Personal Watercraft') {
-                var url = self.option.personalWatercraft.url;
-                self.button.setAttribute('href', `${url}`);
-            }
-            if (dropdownSelection === 'Motorboat') {
-                var url = self.option.motorBoat.url;
-                self.button.setAttribute('href', `${url}`);
-            }
-        });
-
-    }
-}
-
-var dropdownOptions = new LinkSelector({
-    personalWatercraft: {
-        type: 'Personal Watercraft',
-        url: 'https://www.usaa.com'
-    },
-    motorBoat: {
-        type: 'Motorboat',
-        url: 'https://www.feel-like-dancing.com'
-    }
-
-})
-
-// let pontoon = new LinkSelector({
-//     type: 'Pontoon',
-//     url: 'https://www.usaa.com'
-// });
-// let watercraft = new LinkSelector( {
-//     type: 'Watercraft',
-//     url: 'https://www.feel-like-dancing.com'
-// })
-// let sailBoat = new LinkSelector({
-//     type: 'Sail Boat',
-//     url: 'www.google.com'
-// })
-// let fishingBoat = new LinkSelector({
-//     type: 'Fishing Boat',
-//     url: null
-// })
-
-// let yacht = new LinkSelector({
-//     type: 'Yacht',
-//     url: 'https://www.planeta-mujer.org'
-// })
-// // 
